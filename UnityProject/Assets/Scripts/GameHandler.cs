@@ -1,28 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameHandler : MonoBehaviour {
+public class GameHandler{
 
     private static GameHandler current;
+    public GameObject player;
+
+    public delegate void GhostStep();
+    public static event GhostStep OnGhostStep;
 
     public static GameHandler instance{
         get
         {
-            if (!current)
-            {
-                current = FindObjectOfType(typeof(GameHandler)) as GameHandler;
-                if (!current)
-                    Debug.LogError("There has to be a GameHandler in the scene.");
-            }
+            if (current == null)
+                current = new GameHandler();
             return current;
         }
     }
 
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
 }
