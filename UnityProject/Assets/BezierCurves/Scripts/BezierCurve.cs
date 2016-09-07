@@ -312,25 +312,38 @@ public class BezierCurve : MonoBehaviour {
 			Gizmos.DrawLine(lastPoint, currentPoint);
 			lastPoint = currentPoint;
 		}		
-	}	
+	}
+    public void MoveCurve(Transform me, BezierPoint p1, BezierPoint p2, int resolution)
+    {
+        int limit = resolution + 1;
+        float _res = resolution;
+        Vector3 lastPoint = p1.position;
+        Vector3 currentPoint = Vector3.zero;
 
-	/// <summary>
-	/// 	- Gets the point 't' percent along a curve
-	/// 	- Automatically calculates for the number of relevant points
-	/// </summary>
-	/// <returns>
-	/// 	- The point 't' percent along the curve
-	/// </returns>
-	/// <param name='p1'>
-	/// 	- The bezier point at the beginning of the curve
-	/// </param>
-	/// <param name='p2'>
-	/// 	- The bezier point at the end of the curve
-	/// </param>
-	/// <param name='t'>
-	/// 	- Value between 0 and 1 representing the percent along the curve (0 = 0%, 1 = 100%)
-	/// </param>
-	public static Vector3 GetPoint(BezierPoint p1, BezierPoint p2, float t)
+        for (int i = 1; i < limit; i++)
+        {
+            currentPoint = GetPoint(p1, p2, i / _res);
+           me.position = Vector3.MoveTowards(lastPoint, currentPoint,1f);
+            lastPoint = currentPoint;
+        }
+    }
+    /// <summary>
+    /// 	- Gets the point 't' percent along a curve
+    /// 	- Automatically calculates for the number of relevant points
+    /// </summary>
+    /// <returns>
+    /// 	- The point 't' percent along the curve
+    /// </returns>
+    /// <param name='p1'>
+    /// 	- The bezier point at the beginning of the curve
+    /// </param>
+    /// <param name='p2'>
+    /// 	- The bezier point at the end of the curve
+    /// </param>
+    /// <param name='t'>
+    /// 	- Value between 0 and 1 representing the percent along the curve (0 = 0%, 1 = 100%)
+    /// </param>
+    public static Vector3 GetPoint(BezierPoint p1, BezierPoint p2, float t)
 	{
 		if(p1.handle2 != Vector3.zero)
 		{
