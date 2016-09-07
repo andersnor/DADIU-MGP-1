@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GhostPrint : MonoBehaviour {
 
-    //GameHandler GH;
+    GameHandler GH;
     public Transform followTar;
     public float followSpeed = 5, stepThold;
     float dist = 0;
