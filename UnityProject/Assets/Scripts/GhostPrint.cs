@@ -3,7 +3,6 @@ using System.Collections;
 
 public class GhostPrint : MonoBehaviour {
 
-    GameHandler GH;
     public Transform followTar;
     public float followSpeed = 5, stepThold;
     float dist = 0;
@@ -21,19 +20,17 @@ public class GhostPrint : MonoBehaviour {
         printPool = GameObject.Find("_SCRIPTS").GetComponent<PrintPool>();
         agent = GetComponent<NavMeshAgent>();
         //SUBSCRIBE TO: PlayerMoved, OnMusicBoxRewind/Timeout
+
        
     }
 	
 	// Update is called once per frame
 	void Update () {
-        GhostMovement();
         dist += (prevPos - transform.position).magnitude;
         prevPos = transform.position;
-       
         if (dist > stepThold)
         {
             spawnStep();
-            //CALL TO GAMEHANDLER EVENT STEP #####TODO#####
             dist = 0;
         }
         //Evt. dynamisk stepThold
@@ -58,18 +55,5 @@ public class GhostPrint : MonoBehaviour {
         newPrint. transform.localRotation = transform.rotation;
         newPrint.transform.SetParent(null);
         foot =! foot;
-    }
-
-    void GhostMovement()
-    {
-        if (followTar.GetComponent<Rigidbody>().velocity.magnitude == 0)
-        {
-            
-        }
-        else
-        {
-            agent.destination = followTar.position;
-        }
-
     }
 }
