@@ -12,7 +12,8 @@ public class GhostMovement : MonoBehaviour {
     public float walkSpeed;
     public float followSpeed;
     [Header("Print position off-set (Left/Right)")]
-    public int printOffSet;
+    [SerializeField]
+    float printOffSet;
 
     Vector3 prevPos;
     GhostPrintPool printPool;
@@ -65,10 +66,10 @@ public class GhostMovement : MonoBehaviour {
         }
         newPrint.transform.SetParent(transform);
         if (foot)
-            newPrint.transform.localPosition = new Vector3(-printOffSet, 0, 0);
+            newPrint.transform.localPosition = new Vector3(-printOffSet, -GetComponent<Collider>().bounds.extents.y*2, 0);
         else
-            newPrint.transform.localPosition = new Vector3(printOffSet, 0, 0);
-        newPrint. transform.localRotation = transform.rotation;
+            newPrint.transform.localPosition = new Vector3(printOffSet, -GetComponent<Collider>().bounds.extents.y*2, 0);
+        newPrint.transform.rotation = transform.rotation;
         newPrint.transform.SetParent(null);
         foot =! foot;
     }
