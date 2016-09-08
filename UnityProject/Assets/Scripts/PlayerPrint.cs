@@ -2,13 +2,16 @@
 using System.Collections;
 
 public class PlayerPrint : MonoBehaviour {
-    [Header("Foot-print left/right off-set")]
-    public int printOffSet;
+    [Header("Distance between player-feet(m):")]
+    [SerializeField]
+    float feetDistance;
+    float printOffSet;
     PlayerPrintPool printPool;
     bool foot = false; //True = left, false = right
 
     // Use this for initialization
     void Start () {
+        printOffSet = feetDistance / 2;
         GameHandler.instance.OnPlayerStep += spawnStep;
 	}
 

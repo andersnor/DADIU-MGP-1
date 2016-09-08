@@ -3,12 +3,14 @@ using System.Collections;
 
 public class SpawnIdles : MonoBehaviour {
     GameObject levelField;
-   public GameObject idleTar; 
+    GameObject idleTar; 
     [Header("Input GameObject-name of base level:")]
-    public string baseLevel;
+    [SerializeField]
+    string baseLevel;
 
 	// Use this for initialization
 	void Awake () {
+        idleTar = (GameObject) Resources.Load("Prefabs/idleTar");
         if (GameObject.Find(baseLevel) == null)
             print("No BASE LEVEL object found, input string-name under \"idleTarget\" script");
         else

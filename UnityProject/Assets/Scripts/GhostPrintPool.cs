@@ -2,13 +2,15 @@
 using System.Collections;
 
 public class GhostPrintPool : MonoBehaviour {
-    public GameObject printPrefab;
-    public GameObject[] printPool;
-    public int poolSize;
+    GameObject printPrefab;
+    GameObject[] printPool;
+    [Header("Amount of maximum visible ghost-prints:")]
+    [SerializeField]
+    int poolSize;
     int index = 0;
 	// Use this for initialization
 	void Start () {
-        //printPrefab = Resources.Load("/Prefabs/ghostPrint") as GameObject;
+        printPrefab = Resources.Load("Prefabs/ghostPrint") as GameObject;
         printPool = new GameObject[poolSize];
         for (int x = 0; x < poolSize; x++)
             printPool[x] = printPrefab;

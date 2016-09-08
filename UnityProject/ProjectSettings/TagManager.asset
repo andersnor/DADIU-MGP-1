@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MusicSpawn
   - MusicBox
+  - spawned
   layers:
   - Default
   - TransparentFX

@@ -5,14 +5,20 @@ public class GhostMovement : MonoBehaviour {
 
     [Header("Follow target variables")]
     public Transform followTar;
-    public float stepThold, idleTimer;
+    [SerializeField]
+    float stepThold, idleTimer;
     float dist = 0, followTimeout = 0;
     [Header("Ghost movement variables")]
-    public float sprintSpeed;
-    public float walkSpeed;
-    public float followSpeed;
-    [Header("Print position off-set (Left/Right)")]
-    public int printOffSet;
+    [SerializeField]
+    float sprintSpeed;
+    [SerializeField]
+    float walkSpeed;
+    [SerializeField]
+    float followSpeed;
+    [Header("Distance between ghost feet (m):")]
+    [SerializeField]
+    float feetDistance;
+    float printOffSet;
 
     Vector3 prevPos;
     GhostPrintPool printPool;
@@ -22,11 +28,11 @@ public class GhostMovement : MonoBehaviour {
     Transform[] randTar;
 
     void Start () {
+        printOffSet = feetDistance / 2;
         Transform idleLookUp = GameObject.Find("idleTargets").transform;
         randTar = new Transform[idleLookUp.childCount];
         for (int i = 0; i < randTar.Length; i++)
             randTar[i] = idleLookUp.GetChild(i);
-        print("Found " + randTar.Length + " random positions to idle towards. Add more \"randTar\" prefabs positioned atedges of world in scene, as child to idleTargets if necessary");
         printPool = GameObject.Find("_SCRIPTS").GetComponent<GhostPrintPool>();
         agent = GetComponent<NavMeshAgent>();
         GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
@@ -65,10 +71,10 @@ public class GhostMovement : MonoBehaviour {
         }
         newPrint.transform.SetParent(transform);
         if (foot)
-            newPrint.transform.localPosition = new Vector3(-printOffSet, 0, 0);
+            newPrint.transform.localPosition = new Vector3(-printOffSet, -GetComponent<Collider>().bounds.extents.y * 2, 0);
         else
-            newPrint.transform.localPosition = new Vector3(printOffSet, 0, 0);
-        newPrint. transform.localRotation = transform.rotation;
+            newPrint.transform.localPosition = new Vector3(printOffSet, -GetComponent<Collider>().bounds.extents.y * 2, 0);
+        newPrint. transform.rotation = transform.rotation;
         newPrint.transform.SetParent(null);
         foot =! foot;
     }
