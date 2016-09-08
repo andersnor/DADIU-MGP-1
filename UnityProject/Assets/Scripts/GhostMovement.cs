@@ -15,7 +15,7 @@ public class GhostMovement : MonoBehaviour {
     public int printOffSet;
 
     Vector3 prevPos;
-    PrintPool printPool;
+    GhostPrintPool printPool;
     bool foot = false; //True = left, false = right
 
     NavMeshAgent agent;
@@ -27,7 +27,7 @@ public class GhostMovement : MonoBehaviour {
         for (int i = 0; i < randTar.Length; i++)
             randTar[i] = idleLookUp.GetChild(i);
         print("Found " + randTar.Length + " random positions to idle towards. Add more \"randTar\" prefabs positioned atedges of world in scene, as child to idleTargets if necessary");
-        printPool = GameObject.Find("_SCRIPTS").GetComponent<PrintPool>();
+        printPool = GameObject.Find("_SCRIPTS").GetComponent<GhostPrintPool>();
         agent = GetComponent<NavMeshAgent>();
         GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
         GameHandler.instance.OnPlayerStep += UpdPlayerPos;
@@ -54,11 +54,6 @@ public class GhostMovement : MonoBehaviour {
 
     void spawnStep()
     {
-        Vector3 footPos;
-        if (foot)
-            footPos = new Vector3(-printOffSet, 0, 0);
-        else
-            footPos = new Vector3(printOffSet, 0, 0);
         GameObject newPrint = printPool.getNextPrint();
         if(!newPrint.CompareTag("spawned"))
         {
@@ -67,7 +62,10 @@ public class GhostMovement : MonoBehaviour {
             printPool.registerPrint(newPrint);
         }
         newPrint.transform.SetParent(transform);
-        newPrint.transform.localPosition = footPos;
+        if (foot)
+            newPrint.transform.localPosition = new Vector3(-printOffSet, 0, 0);
+        else
+            newPrint.transform.localPosition = new Vector3(printOffSet, 0, 0);
         newPrint. transform.localRotation = transform.rotation;
         newPrint.transform.SetParent(null);
         foot =! foot;

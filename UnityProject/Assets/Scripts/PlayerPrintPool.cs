@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PrintPool : MonoBehaviour {
+public class PlayerPrintPool : MonoBehaviour {
     public GameObject printPrefab;
     public GameObject[] printPool;
     public int poolSize;

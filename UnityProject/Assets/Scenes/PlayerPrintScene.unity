@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.38653412, g: 0.41996717, b: 0.4857347, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -90,6 +90,47 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &181488256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 181488258}
+  - 114: {fileID: 181488257}
+  m_Layer: 0
+  m_Name: Player_PLACEHOLDER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &181488257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 181488256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb10561d441fc54429e419ee529d347a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  printOffSet: 0
+--- !u!4 &181488258
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 181488256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960.8999, y: 539.77057, z: 0.027069187}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &1266323576
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +143,8 @@ GameObject:
   - 92: {fileID: 1266323579}
   - 124: {fileID: 1266323578}
   - 81: {fileID: 1266323577}
+  - 114: {fileID: 1266323582}
+  - 114: {fileID: 1266323583}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -177,6 +220,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1266323582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1266323576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9386a7e33ebee2a42aaa355a5965d38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  printPrefab: {fileID: 1000011507626484, guid: 8a6e66476746aac42be961f36030f912,
+    type: 2}
+  printPool: []
+  poolSize: 10
+--- !u!114 &1266323583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1266323576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1caa415185a04514895a4dc20cbb603d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  printPrefab: {fileID: 1000011507626484, guid: b1472cad91600584db5c165452473dd6,
+    type: 2}
+  printPool: []
+  poolSize: 10
 --- !u!1 &1469776312
 GameObject:
   m_ObjectHideFlags: 0
