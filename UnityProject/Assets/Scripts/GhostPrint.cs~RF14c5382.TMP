@@ -20,11 +20,12 @@ public class GhostPrint : MonoBehaviour {
         printPool = GameObject.Find("_SCRIPTS").GetComponent<PrintPool>();
         agent = GetComponent<NavMeshAgent>();
         //SUBSCRIBE TO: PlayerMoved, OnMusicBoxRewind/Timeout
-
-       
+        GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
+        GameHandler.instance.OnMusicBoxTimeout += UpdPlayerPos;
+        GameHandler.instance.OnPlayerStep += UpdPlayerPos;
+        //GameHandler.instance.OnMusicBoxRewinded += UpdPlayerPos;
     }
 	
-	// Update is called once per frame
 	void Update () {
         dist += (prevPos - transform.position).magnitude;
         prevPos = transform.position;
@@ -32,9 +33,8 @@ public class GhostPrint : MonoBehaviour {
         {
             spawnStep();
             dist = 0;
+            //GameHandler.instance.ghostStep();
         }
-        //Evt. dynamisk stepThold
-
     }
 
     void spawnStep()
@@ -56,4 +56,17 @@ public class GhostPrint : MonoBehaviour {
         newPrint.transform.SetParent(null);
         foot =! foot;
     }
+    void musicBoxWind()
+    {
+        //do sprint
+    }
+    void musicBoxTimeout()
+    {
+        //resume follow
+    }
+    void UpdPlayerPos()
+    {
+        agent.destination = followTar.position;
+    }
+
 }
