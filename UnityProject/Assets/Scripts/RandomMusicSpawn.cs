@@ -3,10 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class RandomMusicSpawn : MonoBehaviour {
-
+    
     public float spawnRange;
-    public float pointRange;
+    public float minSpawnRange;
+    float pointRange;
     public GameObject player;
+    public float rangeIncrease;
+    public bool debug;
+    string musicSpawnTag = "MusicSpawn";
 
 	// Use this for initialization
 	void Start () {
@@ -17,88 +21,98 @@ public class RandomMusicSpawn : MonoBehaviour {
 	
 	}
 
-    public void SpawnRandomInRange()
+    public void SpawnRandom()
     {
-        print("Spawning...");
-        // Find spawn points in range, and all spawn points in case there are no in range, then remove self
-        GameObject[] allPoints = GameObject.FindGameObjectsWithTag("MusicSpawn");
-        Collider[] collided = Physics.OverlapSphere(player.transform.position, spawnRange);
-        List<GameObject> inRange = removeSelf(gameObject, collided);
-        if(inRange.Count == 0)
-        {
-            // No points in range, move to any random point including self
-            transform.position = allPoints[Random.Range(0, allPoints.Length)].transform.position;
-        }
-        else
-        {
-            // Move to a random point in range
-            transform.position = inRange[Random.Range(0, inRange.Count)].transform.position;
-        }
+        SpawnRandomOutRange();
+        spawnRange += rangeIncrease;
+        player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
     }
 
-    public void SpawnRandomOutRange()
+    private void SpawnRandomOutRange()
     {
-        GameObject[] allPoints = GameObject.FindGameObjectsWithTag("MusicSpawn");
-        Collider[] collided = Physics.OverlapSphere(player.transform.position, spawnRange);
-
-        List<GameObject> outRange = sortOut(collided, allPoints);
+        GameObject[] allPoints = GameObject.FindGameObjectsWithTag(musicSpawnTag);
+        List<GameObject> inRange = getMusicSpawns(Physics.OverlapSphere(player.transform.position, spawnRange));
+        List<GameObject> outRange = getOutRange(allPoints);
         if(outRange.Count == 0)
         {
-            // No points outside range, move to any random point including self
-            transform.position = allPoints[Random.Range(0, allPoints.Length)].transform.position;
+            // There are no points outside range, sort out the too close points, and choose a random point from them.
+            List<GameObject> spawnPool = sortOutTooClose(allPoints);
+            transform.position = spawnPool[Random.Range(0, spawnPool.Count)].transform.position;
+            
+            // Coloring of too close/points picked between for debugging.
+            if (debug)
+            {
+                for (int i = 0; i < allPoints.Length; i++)
+                {
+                    allPoints[i].gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                }
+                for (int i = 0; i < spawnPool.Count; i++)
+                {
+                    spawnPool[i].gameObject.GetComponent<Renderer>().material.color = Color.green;
+                }
+            }
         }
         else
         {
-            // Move to a random point in range
+            // There were points outside of range, pick a random one of them.
             transform.position = outRange[Random.Range(0, outRange.Count)].transform.position;
+
+            // Coloring of point in/out of range for debugging.
+            if (debug)
+            {
+                for (int i = 0; i < allPoints.Length; i++)
+                {
+                    allPoints[i].gameObject.GetComponent<Renderer>().material.color = Color.black;
+                }
+                for (int i = 0; i < inRange.Count; i++)
+                {
+                    inRange[i].gameObject.GetComponent<Renderer>().material.color = Color.red;
+                }
+            }
         }
-        
     }
 
-    List<GameObject> sortOut(Collider[] inside, GameObject[] all)
+    // Sorts out the music spawn points from all objects in range of the player
+    private List<GameObject> getMusicSpawns(Collider[] list)
     {
         List<GameObject> result = new List<GameObject>();
-        for(int i = 0; i < all.Length; i++)
+
+        for (int i = 0; i < list.Length; i++)
         {
-            if (contains(inside, all[i]))
+            if (list[i].gameObject.tag == musicSpawnTag)
             {
-                all[i].GetComponent<Renderer>().material.color = Color.red;
+                result.Add(list[i].gameObject);
             }
-            else
+        }
+
+        return result;
+    }
+
+    private List<GameObject> getOutRange(GameObject[] list)
+    {
+        List<GameObject> result = new List<GameObject>();
+        for(int i = 0; i < list.Length; i++)
+        {
+            if(Vector3.Distance(list[i].transform.position, player.transform.position) > spawnRange)
             {
-                result.Add(all[i]);
-                all[i].GetComponent<Renderer>().material.color = Color.black;
+                result.Add(list[i]);
             }
         }
         return result;
     }
 
-    bool contains(Collider[] list, GameObject obj)
-    {
-        for(int i = 0; i < list.Length; i++)
-        {
-            if(list[i].gameObject == obj)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // Sort out music spawn points and remove self from the list
-    List<GameObject> removeSelf(GameObject self, Collider[] list)
+    private List<GameObject> sortOutTooClose(GameObject[] list)
     {
         List<GameObject> result = new List<GameObject>();
-        for (int i = 0; i < list.Length; i++)
+
+        for(int i = 0; i < list.Length; i++)
         {
-            if (list[i].tag == "MusicSpawn")
+            if(Vector3.Distance(list[i].transform.position, player.transform.position) > minSpawnRange)
             {
-                if (Vector3.Distance(self.transform.position, list[i].gameObject.transform.position) > pointRange)
-                {
-                    result.Add(list[i].gameObject);
-                }
+                result.Add(list[i]);
             }
         }
+
         return result;
     }
 }

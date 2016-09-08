@@ -5,7 +5,6 @@ public class RandomTrigger : MonoBehaviour {
 
     public GameObject musicBox;
     public float speed;
-    public bool insideRange;
 
 	// Use this for initialization
 	void Start () {
@@ -21,14 +20,7 @@ public class RandomTrigger : MonoBehaviour {
     {
         if(coll.gameObject.tag == "MusicBox")
         {
-            if (insideRange)
-            {
-                musicBox.GetComponent<RandomMusicSpawn>().SpawnRandomInRange();
-            }
-            else
-            {
-                musicBox.GetComponent<RandomMusicSpawn>().SpawnRandomOutRange();
-            }
+            coll.gameObject.GetComponent<RandomMusicSpawn>().SpawnRandom();
         }
     }
 }

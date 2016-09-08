@@ -428,7 +428,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRange: 15
   pointRange: 0.1
-  player: {fileID: 0}
+  player: {fileID: 1807029160}
+  inRange: 0
+  rangeIncrease: 1
 --- !u!1 &708173288
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,8 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicBox: {fileID: 514093080}
-  speed: 1
-  insideRange: 0
+  speed: 8
 --- !u!54 &1807029166
 Rigidbody:
   m_ObjectHideFlags: 0
