@@ -1727,7 +1727,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 2, z: 0.8}
+  m_Size: {x: 0.5, y: 2, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1340848753 stripped
 GameObject:
@@ -3963,15 +3963,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436053472, guid: 1db74632ed5d43041886aee2596d52d9, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.3387101
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436053472, guid: 1db74632ed5d43041886aee2596d52d9, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.3387098
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436053472, guid: 1db74632ed5d43041886aee2596d52d9, type: 2}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.3387098
       objectReference: {fileID: 0}
     - target: {fileID: 33000012889299340, guid: 1db74632ed5d43041886aee2596d52d9,
         type: 2}
