@@ -22,7 +22,7 @@ GameObject:
   - 33: {fileID: 33000013602240932}
   - 23: {fileID: 23000013592485530}
   m_Layer: 0
-  m_Name: Print
+  m_Name: playerPrint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
