@@ -21,6 +21,9 @@ public class GhostMovement : MonoBehaviour {
     NavMeshAgent agent;
     Transform[] randTar;
 
+   
+
+
     void Start () {
         Transform idleLookUp = GameObject.Find("idleTargets").transform;
         randTar = new Transform[idleLookUp.childCount];
@@ -31,7 +34,7 @@ public class GhostMovement : MonoBehaviour {
         agent = GetComponent<NavMeshAgent>();
         GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
         GameHandler.instance.OnPlayerStep += UpdPlayerPos;
-        GameHandler.instance.OnMusicBoxRewinded += MBoxWinded;
+        //GameHandler.instance.OnMusicBoxRewinded += MBoxWinded;
     }
 	
 	void Update () {
@@ -41,7 +44,7 @@ public class GhostMovement : MonoBehaviour {
         {
             spawnStep();
             dist = 0;
-            GameHandler.instance.TriggerGhostStep();
+            //GameHandler.instance.ghostStep();
         }
         followTimeout += 1 * Time.deltaTime;
         if (followTimeout > idleTimer)
@@ -50,8 +53,6 @@ public class GhostMovement : MonoBehaviour {
             agent.speed = walkSpeed;
             followTimeout = 0;
         }
-
-        agent.destination = followTar.position;
     }
 
     void spawnStep()
