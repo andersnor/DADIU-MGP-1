@@ -309,6 +309,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1409779788}
+  playerCamera: {fileID: 2024221523}
+  movementSpeed: 150
+  drag: 0.9
   stepThold: 10
   idleTimer: 0
 --- !u!54 &1409779794
