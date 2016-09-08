@@ -21,11 +21,14 @@ public class RandomMusicSpawn : MonoBehaviour {
 	
 	}
 
-    public void SpawnRandom()
+    void OnTriggerStay(Collider col)
     {
+        if(col.tag == "Player")
+        {
         SpawnRandomOutRange();
         spawnRange += rangeIncrease;
-        player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
+        //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
+        }
     }
 
     private void SpawnRandomOutRange()

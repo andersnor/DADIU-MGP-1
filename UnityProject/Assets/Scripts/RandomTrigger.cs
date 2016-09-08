@@ -16,11 +16,11 @@ public class RandomTrigger : MonoBehaviour {
         transform.position = Vector3.MoveTowards(transform.position, musicBox.transform.position, speed * Time.deltaTime);
 	}
 
-    void OnTriggerStay(Collider coll)
+    /*void OnTriggerStay(Collider coll)
     {
         if(coll.gameObject.tag == "MusicBox")
         {
             coll.gameObject.GetComponent<RandomMusicSpawn>().SpawnRandom();
         }
-    }
+    }*/
 }
