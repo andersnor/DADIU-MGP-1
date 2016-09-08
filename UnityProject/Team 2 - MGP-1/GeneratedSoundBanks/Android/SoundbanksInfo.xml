@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="118">
+	<RootPaths>
+		<ProjectRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\GeneratedSoundBanks\Android\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="550365015" Name="Footsteps_Enemy" ObjectPath="\Events\Default Work Unit\Footsteps_Enemy"/>
+				<Event Id="196357682" Name="Footsteps_Player" ObjectPath="\Events\Default Work Unit\Footsteps_Player"/>
+				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play"/>
+				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="87929646" Language="SFX">
+					<ShortName>Footsteps_4.wav</ShortName>
+					<Path>SFX\Footsteps_4_9E69E797.wem</Path>
+				</File>
+				<File Id="245415407" Language="SFX">
+					<ShortName>Footsteps_2.wav</ShortName>
+					<Path>SFX\Footsteps_2_9E69E797.wem</Path>
+				</File>
+				<File Id="402242361" Language="SFX">
+					<ShortName>Music Box Melody.wav</ShortName>
+					<Path>SFX\Music Box Melody_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="731114191" Language="SFX">
+					<ShortName>Footsteps_3.wav</ShortName>
+					<Path>SFX\Footsteps_3_9E69E797.wem</Path>
+				</File>
+				<File Id="867615473" Language="SFX">
+					<ShortName>Footsteps_6.wav</ShortName>
+					<Path>SFX\Footsteps_6_9E69E797.wem</Path>
+				</File>
+				<File Id="964687993" Language="SFX">
+					<ShortName>Footsteps_5.wav</ShortName>
+					<Path>SFX\Footsteps_5_9E69E797.wem</Path>
+				</File>
+				<File Id="1029278500" Language="SFX">
+					<ShortName>Footsteps_1.wav</ShortName>
+					<Path>SFX\Footsteps_1_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

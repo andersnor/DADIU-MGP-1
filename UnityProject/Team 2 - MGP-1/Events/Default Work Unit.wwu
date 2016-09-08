@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" SchemaVersion="72">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Footsteps_Player" ID="{74AA77B7-C571-446F-8DDF-CDDEF9F70105}">
+					<ChildrenList>
+						<Action Name="Play" ID="{E2A9C9BE-7128-491D-A673-9CB220F75CDF}" ShortID="577940292" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{AAECF986-9160-48BD-8AAA-5C02CB0E392D}" Global="false">
+									<ObjectRef Name="Footsteps Player" ID="{11BA31ED-D698-4255-BE32-5F4AF54D8D48}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Footsteps_Enemy" ID="{2BDEB7E9-A6D9-4DAA-ADB9-29269B5AC663}">
+					<ChildrenList>
+						<Action Name="Play" ID="{808B1D8C-E63B-4929-A488-111F25F4B184}" ShortID="349583170" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{58BFC54D-B6EB-4522-BC9D-EDC86FF8360B}" Global="false">
+									<ObjectRef Name="Footsteps Enemy" ID="{34E89693-CA22-4DD3-B4CA-1569F46FBD3A}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Play" ID="{2A2C1EE1-5B9F-4BE8-B822-E092EE8F6776}">
+					<ChildrenList>
+						<Action Name="Play" ID="{04B1704F-61A9-4FAE-A2F4-08B61663EC08}" ShortID="712355101" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{EA9AFFE6-4AD6-4622-9330-41F995A73F58}" Global="false">
+									<ObjectRef Name="Music Box Melody" ID="{A1B3C7F8-5CEC-441A-B6C9-34DE019342D9}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Stop" ID="{E0DD3D61-FE66-42CD-A293-225FE9CCFEEC}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{DF8FB6DE-FD89-40F6-8777-EC55AF55E0AC}" ShortID="284433079" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{C78E8F0F-E7EF-444B-A917-B07E6C92B63D}" Global="false">
+									<ObjectRef Name="Music Box Melody" ID="{A1B3C7F8-5CEC-441A-B6C9-34DE019342D9}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
