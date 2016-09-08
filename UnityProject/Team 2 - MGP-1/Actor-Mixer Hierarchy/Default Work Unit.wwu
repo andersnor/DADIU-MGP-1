@@ -344,6 +344,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Distance_Attenuation" ID="{8FAA5A7E-0F5E-486C-8CF7-13CD7D20983B}" WorkUnitID="{5EEE7555-1318-41FD-BA38-2D7C439DC5EC}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
 						</Reference>
