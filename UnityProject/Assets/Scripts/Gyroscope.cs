@@ -11,9 +11,9 @@ public class Gyroscope : MonoBehaviour {
     float movementSpeed = 150.0f;
     [SerializeField]
     float drag = 0.9f;
-
-    //STEP VARIABLES
-    public float stepThold, idleTimer;
+    [Header("Distance between player-prints:")]
+    [SerializeField]
+    float stepThold;
     float dist = 0;
     Vector3 prevPos;
    

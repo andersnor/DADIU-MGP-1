@@ -162,6 +162,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 214424152}
   - 114: {fileID: 214424151}
+  - 114: {fileID: 214424153}
   m_Layer: 0
   m_Name: _SCRIPTS
   m_TagString: Untagged
@@ -180,9 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9386a7e33ebee2a42aaa355a5965d38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  printPrefab: {fileID: 1000011507626484, guid: 8a6e66476746aac42be961f36030f912,
-    type: 2}
-  printPool: []
   poolSize: 10
 --- !u!4 &214424152
 Transform:
@@ -197,6 +195,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &214424153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214424150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1caa415185a04514895a4dc20cbb603d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 10
 --- !u!1001 &497826101
 Prefab:
   m_ObjectHideFlags: 0
@@ -246,6 +256,26 @@ Prefab:
       propertyPath: followTar
       value: 
       objectReference: {fileID: 1285584085}
+    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
+        type: 2}
+      propertyPath: printOffSet
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
+        type: 2}
+      propertyPath: feetDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
+        type: 2}
+      propertyPath: stepThold
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
+        type: 2}
+      propertyPath: idleTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 060a69bbff7f0344396fb7621ca3fcb2, type: 2}
   m_IsPrefabParent: 0
@@ -545,6 +575,11 @@ Prefab:
     - target: {fileID: 4000011436053472, guid: 1db74632ed5d43041886aee2596d52d9, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011014166372, guid: 1db74632ed5d43041886aee2596d52d9,
+        type: 2}
+      propertyPath: stepThold
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1db74632ed5d43041886aee2596d52d9, type: 2}
