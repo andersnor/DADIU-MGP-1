@@ -7,8 +7,10 @@ public class Gyroscope : MonoBehaviour {
 
     //MOVE VARIABLES
     private bool isMoving = false;
-    private float movementSpeed = 150.0f;
-    private float drag = 0.9f;
+    [SerializeField]
+    float movementSpeed = 150.0f;
+    [SerializeField]
+    float drag = 0.9f;
 
     //STEP VARIABLES
     public float stepThold, idleTimer;
