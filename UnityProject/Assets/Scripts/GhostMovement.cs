@@ -18,6 +18,11 @@ public class GhostMovement : MonoBehaviour {
     [Header("Distance between ghost feet (m):")]
     [SerializeField]
     float feetDistance;
+    public float sprintSpeed;
+    public float walkSpeed;
+    public float followSpeed;
+    [Header("Print position off-set (Left/Right)")]
+    [SerializeField]
     float printOffSet;
 
     Vector3 prevPos;
@@ -75,6 +80,10 @@ public class GhostMovement : MonoBehaviour {
         else
             newPrint.transform.localPosition = new Vector3(printOffSet, -GetComponent<Collider>().bounds.extents.y * 2, 0);
         newPrint. transform.rotation = transform.rotation;
+            newPrint.transform.localPosition = new Vector3(-printOffSet, -GetComponent<Collider>().bounds.extents.y*2, 0);
+        else
+            newPrint.transform.localPosition = new Vector3(printOffSet, -GetComponent<Collider>().bounds.extents.y*2, 0);
+        newPrint.transform.rotation = transform.rotation;
         newPrint.transform.SetParent(null);
         foot =! foot;
     }
