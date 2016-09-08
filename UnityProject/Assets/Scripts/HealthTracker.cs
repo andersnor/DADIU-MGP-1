@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HealthTracker : MonoBehaviour {
 
-    public int health;
+    [SerializeField]
+    int health;
 
 	// Use this for initialization
 	void Start () {
-	    
+        GameHandler.instance.OnGhostAttack += TakeDamage;
 	}
 	
 	// Update is called once per frame
@@ -15,13 +17,10 @@ public class HealthTracker : MonoBehaviour {
 	    
 	}
 
-    void OnCollisionEnter(Collision coll)
+    void TakeDamage()
     {
-        // Should probably check if it collided with the ghost
         health--;
-        if(health == 0)
-        {
-            // End Game by calling event to do so
-        }
+        if(health <= 0)
+            GameHandler.instance.reset();
     }
 }
