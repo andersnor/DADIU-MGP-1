@@ -53,6 +53,8 @@ public class GhostMovement : MonoBehaviour {
             agent.speed = walkSpeed;
             followTimeout = 0;
         }
+
+        agent.destination = followTar.position;
     }
 
     void spawnStep()
