@@ -46,17 +46,20 @@ public class GameHandler{
 
     public void TriggerMusicBoxRewind()
     {
-        OnMusicBoxRewind();
+        if (OnMusicBoxRewind != null)
+            OnMusicBoxRewind();
     }
 
     public void TriggerMusicBoxRewinded()
     {
-        OnMusicBoxRewinded();
+        if (OnMusicBoxRewinded != null)
+            OnMusicBoxRewinded();
     }
 
     public void TriggerMusicBoxTimeout()
     {
-        OnMusicBoxTimeout();
+        if (OnMusicBoxTimeout != null)
+            OnMusicBoxTimeout();
     }
 
     public void TriggerPlayerStep()
@@ -73,7 +76,8 @@ public class GameHandler{
 
     public void TriggerGhostAttack()
     {
-        OnGhostAttack();
+        if (OnGhostAttack != null)
+            OnGhostAttack();
     }
 
 }

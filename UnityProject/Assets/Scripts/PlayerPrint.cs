@@ -11,6 +11,7 @@ public class PlayerPrint : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        printPool = GameObject.Find("_SCRIPTS").GetComponent<PlayerPrintPool>();
         printOffSet = feetDistance / 2;
         GameHandler.instance.OnPlayerStep += spawnStep;
 	}
