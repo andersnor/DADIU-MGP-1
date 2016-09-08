@@ -61,6 +61,7 @@ public class GameHandler{
 
     public void TriggerPlayerStep()
     {
+        if (OnPlayerStep != null)
         OnPlayerStep();
     }
 
