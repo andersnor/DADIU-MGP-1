@@ -66,7 +66,8 @@ public class GameHandler{
 
     public void TriggerGhostStep()
     {
-        OnGhostStep();
+        if(OnGhostStep != null)
+            OnGhostStep();
     }
 
     public void TriggerGhostAttack()
