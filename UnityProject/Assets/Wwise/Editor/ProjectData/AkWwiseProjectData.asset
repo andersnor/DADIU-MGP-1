@@ -28,7 +28,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 550365015
       Guid: e9b7de2bd9a6aa4dadb929269b5ac663
-      maxAttenuation: 100
+      maxAttenuation: 95
     - Name: Footsteps_Player
       Path: Default Work Unit\Footsteps_Player
       PathAndIcons:

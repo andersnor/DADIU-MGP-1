@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
-		<ProjectRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,9 +21,9 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="550365015" Name="Footsteps_Enemy" ObjectPath="\Events\Default Work Unit\Footsteps_Enemy" MaxAttenuation="100.000000"/>
+				<Event Id="550365015" Name="Footsteps_Enemy" ObjectPath="\Events\Default Work Unit\Footsteps_Enemy" MaxAttenuation="95.000000"/>
 				<Event Id="196357682" Name="Footsteps_Player" ObjectPath="\Events\Default Work Unit\Footsteps_Player"/>
-				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play"/>
+				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="95.000000"/>
 				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="3550974753" Name="MusicBox_Windup" ObjectPath="\Events\Default Work Unit\MusicBox_Windup"/>
 			</IncludedEvents>
