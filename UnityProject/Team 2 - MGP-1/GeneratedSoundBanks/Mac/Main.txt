@@ -5,11 +5,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	87929646	Footsteps_4	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_4		46656
-	245415407	Footsteps_2	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_2		37952
-	402242361	Music Box Melody	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\SFX\Music Box Melody_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody		2904128
-	469106502	Footsteps_1	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_1		46656
-	682406377	Footsteps_6	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_6		48704
-	731114191	Footsteps_3	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_3		47680
-	818279564	Footsteps_5	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_5		50240
+	87929646	Footsteps_4	C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_4		46656
+	245415407	Footsteps_2	C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_2		37952
+	402242361	Music Box Melody	C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Mac\SFX\Music Box Melody_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody		2904128
+	469106502	Footsteps_1	C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_1		46656
+	682406377	Footsteps_6	C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_6		48704
+	731114191	Footsteps_3	C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_3		47680
+	818279564	Footsteps_5	C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Mac\SFX\Footsteps_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_5		50240
 
