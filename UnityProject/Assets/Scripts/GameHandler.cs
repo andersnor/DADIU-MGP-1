@@ -82,6 +82,7 @@ public class GameHandler{
     }
 
     public void GameOver(int mode) {
+
         switch (mode)
         {
             case 0:
