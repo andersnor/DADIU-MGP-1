@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76b17f0ec7a3f4f4ca2a43d6a154da8b, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 1
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
@@ -96,10 +96,7 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1133058374
       Guid: f327167d3c75754d8191b275f1303cb3
-  ExpandedItems:
-  - /Team 2 - MGP-1
-  - /Team 2 - MGP-1/Events
-  - /Team 2 - MGP-1/Events/Default Work Unit
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
