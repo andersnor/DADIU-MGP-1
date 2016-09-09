@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
-		<ProjectRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\dadiu\Documents\DADIU-MGP-1\UnityProject\Team 2 - MGP-1\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,10 +16,10 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
-			<ShortName>Main</ShortName>
-			<Path>Main.bnk</Path>
+		<SoundBank Id="3534669624" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_01</ObjectPath>
+			<ShortName>Main_01</ShortName>
+			<Path>Main_01.bnk</Path>
 			<IncludedEvents>
 				<Event Id="550365015" Name="Footsteps_Enemy" ObjectPath="\Events\Default Work Unit\Footsteps_Enemy" MaxAttenuation="95.000000"/>
 				<Event Id="196357682" Name="Footsteps_Player" ObjectPath="\Events\Default Work Unit\Footsteps_Player"/>

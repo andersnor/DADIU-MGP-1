@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID FOOTSTEPS_PLAYER = 196357682U;
         static const AkUniqueID MUSICBOX_PLAY = 2089708342U;
         static const AkUniqueID MUSICBOX_STOP = 2820245704U;
+        static const AkUniqueID MUSICBOX_WINDUP = 3550974753U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -36,7 +37,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID MAIN_01 = 3534669624U;
     } // namespace BANKS
 
     namespace BUSSES

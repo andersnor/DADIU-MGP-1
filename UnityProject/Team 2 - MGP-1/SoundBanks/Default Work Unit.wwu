@@ -3,7 +3,7 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{A4AC25EF-E508-4944-ADCD-3BB956A85491}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="Main" ID="{7D1627F3-753C-4D75-8191-B275F1303CB3}">
+				<SoundBank Name="Main_01" ID="{18995723-8F43-4A6A-9023-8A271CB8D6FF}">
 					<ObjectInclusionList>
 						<ObjectRef Name="MusicBox_Stop" ID="{E0DD3D61-FE66-42CD-A293-225FE9CCFEEC}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Footsteps_Player" ID="{74AA77B7-C571-446F-8DDF-CDDEF9F70105}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>

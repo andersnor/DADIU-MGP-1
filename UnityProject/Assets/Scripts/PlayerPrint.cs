@@ -34,9 +34,16 @@ public class PlayerPrint : MonoBehaviour {
         else
             newPrint.transform.localPosition = new Vector3(printOffset, surfDist, 0);
         newPrint.transform.rotation = transform.rotation;
-        newPrint.GetComponent<AkAmbient>().triggered(); // PLAY AUDIO
+        newPrint.GetComponent<AudioSource>().Play();
+        //newPrint.GetComponent<AkAmbient>().triggered(); // PLAY AUDIO WWIVE SHIT
         newPrint.transform.SetParent(null);
         newPrint.transform.position = new Vector3(newPrint.transform.position.x, 0.005f, transform.position.z);
         foot = !foot;
+    }
+
+    void OnDestroy()
+    {
+        print("destroy");
+        GameHandler.instance.OnPlayerStep -= spawnStep;
     }
 }

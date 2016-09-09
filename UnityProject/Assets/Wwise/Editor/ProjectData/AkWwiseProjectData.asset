@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CF5F4A71-9F0C-4006-A3D8-C505900F160C}'
-    m_lastTimePsrt1: -74483894
-    m_lastTimePart2: -1999382339
+    m_lastTimePsrt1: 375057353
+    m_lastTimePart2: -1999382321
     List:
     - Name: Footsteps_Enemy
       Path: Default Work Unit\Footsteps_Enemy
@@ -48,7 +48,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 2089708342
       Guid: e11e2c2a9f5be84bb822e092ee8f6776
-      maxAttenuation: 0
+      maxAttenuation: 95
     - Name: MusicBox_Stop
       Path: Default Work Unit\MusicBox_Stop
       PathAndIcons:
@@ -94,22 +94,20 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A4AC25EF-E508-4944-ADCD-3BB956A85491}'
-    m_lastTimePsrt1: 579933536
-    m_lastTimePart2: -1999382338
+    m_lastTimePsrt1: 2087781854
+    m_lastTimePart2: -1999382312
     List:
-    - Name: Main
-      Path: Default Work Unit\Main
+    - Name: Main_01
+      Path: Default Work Unit\Main_01
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Main
+      - ElementName: Main_01
         ObjectType: 7
-      ID: -1133058374
-      Guid: f327167d3c75754d8191b275f1303cb3
+      ID: -760297672
+      Guid: 23579918438f6a4a90238a271cb8d6ff
   ExpandedItems:
   - /Team 2 - MGP-1
-  - /Team 2 - MGP-1/Events
-  - /Team 2 - MGP-1/Events/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

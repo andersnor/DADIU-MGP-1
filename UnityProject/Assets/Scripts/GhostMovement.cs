@@ -83,7 +83,8 @@ public class GhostMovement : MonoBehaviour {
             newPrint.GetComponent<Renderer>().material.mainTextureScale = new Vector2(-1f,1);
         }
         newPrint.transform.rotation = transform.rotation;
-        newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO
+        newPrint.GetComponent<AudioSource>().Play();
+        //newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO WWIVE SHIT
         newPrint.transform.SetParent(null);
         newPrint.transform.position = new Vector3(newPrint.transform.position.x, 0.005f, newPrint.transform.position.z);
         foot =! foot;
@@ -107,4 +108,10 @@ public class GhostMovement : MonoBehaviour {
         agent.destination = followTar.position;
     }
 
+    void OnDestroy()
+    {
+        GameHandler.instance.OnMusicBoxRewind -= musicBoxWind;
+        GameHandler.instance.OnPlayerStep -= UpdPlayerPos;
+        GameHandler.instance.OnMusicBoxRewinded -= MBoxWinded;
+    }
 }
