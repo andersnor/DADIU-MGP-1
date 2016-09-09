@@ -14,7 +14,7 @@ public class Gyroscope : MonoBehaviour
     [SerializeField]
     float drag = 0.9f;
     private Vector3 currentOrientation;
-
+    
     [Header("Distance between player-steps (m):")]
     [SerializeField]
     float stepThold;
@@ -25,12 +25,23 @@ public class Gyroscope : MonoBehaviour
     {
         rid = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
+        Input.compass.enabled = true;
+        Input.location.Start();
     }
 
 
     void FixedUpdate()
     {
-        playerCamera.transform.Rotate(-Input.gyro.rotationRateUnbiased.x, -Input.gyro.rotationRateUnbiased.y, Input.gyro.rotationRateUnbiased.z);
+        Quaternion myGyro = Input.gyro.attitude;
+        myGyro *= Quaternion.Euler(new Vector3 (0,0, 0));
+        //Move player x,y.
+        //player.transform.rotation = Quaternion.Euler(0, -Input.compass.trueHeading, 0);
+        //Move camera z.
+        //playerCamera.transform.Rotate(0, 0, Input.gyro.rotationRateUnbiased.z);
+
+        //OLD LINE~~~~~~~~~~
+        playerCamera.transform.Rotate(0, -Input.gyro.rotationRateUnbiased.y, 0);
+        playerCamera.transform.rotation = myGyro; 
         //Check for touch input and set movement to true
         if (Input.touchCount < 2)
         {

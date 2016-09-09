@@ -38,6 +38,12 @@ public class GameHandler{
         }
     }
 
+    public void loadScene(int sceneNr)
+    {
+        current = null;
+        SceneManager.LoadScene(sceneNr);
+    }
+
     public void reset()
     {
         current = null;
