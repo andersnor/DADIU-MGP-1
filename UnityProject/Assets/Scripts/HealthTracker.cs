@@ -19,6 +19,6 @@ public class HealthTracker : MonoBehaviour {
     {
         health--;
         if(health <= 0)
-            GameHandler.instance.GameOver();
+            GameHandler.instance.GameOver(1);
     }
 }
