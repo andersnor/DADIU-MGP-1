@@ -184,6 +184,7 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-12</Value>
@@ -191,6 +192,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Distance_Attenuation" ID="{8FAA5A7E-0F5E-486C-8CF7-13CD7D20983B}" WorkUnitID="{5EEE7555-1318-41FD-BA38-2D7C439DC5EC}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
 						</Reference>
@@ -333,20 +337,8 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<Sound Name="Music Box Melody" ID="{A1B3C7F8-5CEC-441A-B6C9-34DE019342D9}" ShortID="772881737" Type="SoundFX">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-						<Property Name="PositioningType" Type="int16" Value="1"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>12</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
+				<Sound Name="Windup" ID="{FD6810A2-FFB4-4932-8453-4FE1DF398023}" ShortID="7560636" Type="SoundFX">
 					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="Distance_Attenuation" ID="{8FAA5A7E-0F5E-486C-8CF7-13CD7D20983B}" WorkUnitID="{5EEE7555-1318-41FD-BA38-2D7C439DC5EC}"/>
-						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
 						</Reference>
@@ -355,13 +347,32 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Music Box Melody" ID="{B145268A-808F-4339-A8ED-1C52A4CF22A8}" ShortID="402242361">
+						<AudioFileSource Name="Windup" ID="{44CA0430-5BEB-479B-8DFA-10FD714B007C}" ShortID="680501347">
 							<Language>SFX</Language>
-							<AudioFile>Music Box Melody.wav</AudioFile>
+							<AudioFile>Windup.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Music Box Melody" ID="{B145268A-808F-4339-A8ED-1C52A4CF22A8}" Platform="Linked"/>
+						<ActiveSource Name="Windup" ID="{44CA0430-5BEB-479B-8DFA-10FD714B007C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Music Box Melody_1" ID="{E47B5F32-77A6-455E-B606-03F3067EAB3B}" ShortID="309208358" Type="SoundFX">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Music Box Melody_1" ID="{ABBC5BAA-AD57-4B82-8F63-0E02CADEC1FE}" ShortID="895564466">
+							<Language>SFX</Language>
+							<AudioFile>Music Box Melody_1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Music Box Melody_1" ID="{ABBC5BAA-AD57-4B82-8F63-0E02CADEC1FE}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

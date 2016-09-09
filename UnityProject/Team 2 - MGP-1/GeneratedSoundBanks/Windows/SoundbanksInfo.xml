@@ -21,10 +21,11 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="550365015" Name="Footsteps_Enemy" ObjectPath="\Events\Default Work Unit\Footsteps_Enemy"/>
+				<Event Id="550365015" Name="Footsteps_Enemy" ObjectPath="\Events\Default Work Unit\Footsteps_Enemy" MaxAttenuation="100.000000"/>
 				<Event Id="196357682" Name="Footsteps_Player" ObjectPath="\Events\Default Work Unit\Footsteps_Player"/>
-				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="100.000000"/>
+				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play"/>
 				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="3550974753" Name="MusicBox_Windup" ObjectPath="\Events\Default Work Unit\MusicBox_Windup"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="87929646" Language="SFX">
@@ -35,13 +36,13 @@
 					<ShortName>Footsteps_2.wav</ShortName>
 					<Path>SFX\Footsteps_2_9E69E797.wem</Path>
 				</File>
-				<File Id="402242361" Language="SFX">
-					<ShortName>Music Box Melody.wav</ShortName>
-					<Path>SFX\Music Box Melody_4B8CC0C5.wem</Path>
-				</File>
 				<File Id="469106502" Language="SFX">
 					<ShortName>Footsteps_1.wav</ShortName>
 					<Path>SFX\Footsteps_1_9E69E797.wem</Path>
+				</File>
+				<File Id="680501347" Language="SFX">
+					<ShortName>Windup.wav</ShortName>
+					<Path>SFX\Windup_9E69E797.wem</Path>
 				</File>
 				<File Id="682406377" Language="SFX">
 					<ShortName>Footsteps_6.wav</ShortName>
@@ -54,6 +55,10 @@
 				<File Id="818279564" Language="SFX">
 					<ShortName>Footsteps_5.wav</ShortName>
 					<Path>SFX\Footsteps_5_9E69E797.wem</Path>
+				</File>
+				<File Id="895564466" Language="SFX">
+					<ShortName>Music Box Melody_1.wav</ShortName>
+					<Path>SFX\Music Box Melody_1_9E69E797.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

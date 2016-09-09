@@ -12,23 +12,32 @@ public class RandomMusicSpawn : MonoBehaviour {
     public bool debug;
     string musicSpawnTag = "MusicSpawn";
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public int playTime = 60;
+    private float timestamp;
+
+    // Use this for initialization
+    void Start () {
+        timestamp = Time.time;
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+
+        if (timestamp + playTime < Time.time)
+        {
+            GameHandler.instance.TriggerMusicBoxTimeout();
+        }
+    }
 
     void OnTriggerStay(Collider col)
     {
         if(col.tag == "Player")
         {
-			Debug.Log (1);
-        SpawnRandomOutRange();
-        spawnRange += rangeIncrease;
-        //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
+            timestamp = Time.time;
+            SpawnRandomOutRange();
+            spawnRange += rangeIncrease;
+            //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
         }
     }
 

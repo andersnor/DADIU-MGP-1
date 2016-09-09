@@ -67,6 +67,7 @@ public class GameHandler{
     {
         if (OnMusicBoxTimeout != null)
             OnMusicBoxTimeout();
+        GameOver(0);
     }
 
     public void TriggerPlayerStep()

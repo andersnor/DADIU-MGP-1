@@ -30,7 +30,7 @@
 						<Action Name="Play" ID="{04B1704F-61A9-4FAE-A2F4-08B61663EC08}" ShortID="712355101" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{EA9AFFE6-4AD6-4622-9330-41F995A73F58}" Global="false">
-									<ObjectRef Name="Music Box Melody" ID="{A1B3C7F8-5CEC-441A-B6C9-34DE019342D9}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+									<ObjectRef Name="Music Box Melody_1" ID="{E47B5F32-77A6-455E-B606-03F3067EAB3B}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -41,7 +41,18 @@
 						<Action Name="Stop" ID="{DF8FB6DE-FD89-40F6-8777-EC55AF55E0AC}" ShortID="284433079" Type="Stop" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{C78E8F0F-E7EF-444B-A917-B07E6C92B63D}" Global="false">
-									<ObjectRef Name="Music Box Melody" ID="{A1B3C7F8-5CEC-441A-B6C9-34DE019342D9}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+									<ObjectRef Name="Music Box Melody_1" ID="{E47B5F32-77A6-455E-B606-03F3067EAB3B}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Windup" ID="{0A848CC1-61FC-4FF4-8BE1-952265D090D9}">
+					<ChildrenList>
+						<Action Name="Play" ID="{BFF64040-F6EC-4F35-B54B-C33504C6C856}" ShortID="574803557" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B60C9A32-39AE-4B45-B01B-7B2A6AFFBF6D}" Global="false">
+									<ObjectRef Name="Windup" ID="{FD6810A2-FFB4-4932-8453-4FE1DF398023}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
 								</Element>
 							</ElementList>
 						</Action>

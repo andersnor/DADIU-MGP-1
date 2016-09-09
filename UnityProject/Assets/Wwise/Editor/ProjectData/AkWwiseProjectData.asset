@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CF5F4A71-9F0C-4006-A3D8-C505900F160C}'
-    m_lastTimePsrt1: 863664551
-    m_lastTimePart2: -1999382395
+    m_lastTimePsrt1: -74483894
+    m_lastTimePart2: -1999382339
     List:
     - Name: Footsteps_Enemy
       Path: Default Work Unit\Footsteps_Enemy
@@ -28,7 +28,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 550365015
       Guid: e9b7de2bd9a6aa4dadb929269b5ac663
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: Footsteps_Player
       Path: Default Work Unit\Footsteps_Player
       PathAndIcons:
@@ -59,6 +59,16 @@ MonoBehaviour:
       ID: -1474721592
       Guid: 613ddde066fecd42a293225fe9ccfeec
       maxAttenuation: 0
+    - Name: MusicBox_Windup
+      Path: Default Work Unit\MusicBox_Windup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicBox_Windup
+        ObjectType: 3
+      ID: -743992543
+      Guid: c18c840afc61f44f8be1952265d090d9
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -84,8 +94,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A4AC25EF-E508-4944-ADCD-3BB956A85491}'
-    m_lastTimePsrt1: 883315675
-    m_lastTimePart2: -1999382395
+    m_lastTimePsrt1: 579933536
+    m_lastTimePart2: -1999382338
     List:
     - Name: Main
       Path: Default Work Unit\Main
