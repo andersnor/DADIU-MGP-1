@@ -20,7 +20,8 @@ public class HealthTracker : MonoBehaviour {
     void TakeDamage()
     {
         health--;
-        if(health <= 0)
-            GameHandler.instance.reset();
+        if (health <= 0)
+            print("fix ghost kill");
+            //GameHandler.instance.GhostKill();
     }
 }
