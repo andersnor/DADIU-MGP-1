@@ -32,6 +32,7 @@ public class PlayerPrint : MonoBehaviour {
         else
             newPrint.transform.localPosition = new Vector3(printOffSet, -GetComponent<Collider>().bounds.extents.y, 0);
         newPrint.transform.localRotation = transform.rotation;
+        newPrint.GetComponent<AkAmbient>().triggered(); // PLAY AUDIO
         newPrint.transform.SetParent(null);
         foot = !foot;
     }

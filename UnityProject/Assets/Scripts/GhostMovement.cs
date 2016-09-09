@@ -39,7 +39,10 @@ public class GhostMovement : MonoBehaviour {
         GameHandler.instance.OnPlayerStep += UpdPlayerPos;
         GameHandler.instance.OnMusicBoxRewinded += MBoxWinded;
     }
-	
+	void Awake()
+    {
+
+    }
 	void Update () {
         dist += (prevPos - transform.position).magnitude;
         prevPos = transform.position;
@@ -60,6 +63,7 @@ public class GhostMovement : MonoBehaviour {
 
     void spawnStep()
     {
+     
         GameObject newPrint = printPool.getNextPrint();
         if(!newPrint.CompareTag("spawned"))
         {
@@ -73,6 +77,7 @@ public class GhostMovement : MonoBehaviour {
         else
             newPrint.transform.localPosition = new Vector3(printOffset, -GetComponent<Collider>().bounds.extents.y * 2, 0);
         newPrint.transform.rotation = transform.rotation;
+        newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO
         newPrint.transform.SetParent(null);
         foot =! foot;
     }

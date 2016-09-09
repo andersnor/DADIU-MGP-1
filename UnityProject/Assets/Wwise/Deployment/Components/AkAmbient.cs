@@ -46,6 +46,11 @@ public class AkAmbient : AkEvent
 	
 	static public Dictionary<int, AkMultiPosEvent> multiPosEventTree = new Dictionary<int, AkMultiPosEvent>();
 	
+    public void triggered()
+    {
+        Awake();
+    }
+
 	void OnEnable()
 	{
 		if (multiPositionTypeLabel == MultiPositionTypeLabel.Simple_Mode)
