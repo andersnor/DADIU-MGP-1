@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CF5F4A71-9F0C-4006-A3D8-C505900F160C}'
-    m_lastTimePsrt1: 2133261522
-    m_lastTimePart2: -1999382396
+    m_lastTimePsrt1: 863664551
+    m_lastTimePart2: -1999382395
     List:
     - Name: Footsteps_Enemy
       Path: Default Work Unit\Footsteps_Enemy
@@ -48,7 +48,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 2089708342
       Guid: e11e2c2a9f5be84bb822e092ee8f6776
-      maxAttenuation: 100
+      maxAttenuation: 0
     - Name: MusicBox_Stop
       Path: Default Work Unit\MusicBox_Stop
       PathAndIcons:
@@ -63,29 +63,29 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}'
-    m_lastTimePsrt1: 2134341584
-    m_lastTimePart2: -1999382396
+    m_lastTimePsrt1: 864924623
+    m_lastTimePart2: -1999382395
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{5F6B6170-6ABC-420D-8118-1B94B3A46F6B}'
-    m_lastTimePsrt1: 2140401931
-    m_lastTimePart2: -1999382396
+    m_lastTimePsrt1: 883335676
+    m_lastTimePart2: -1999382395
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{39DC731D-19C4-43EF-817C-731414E9FD9C}'
-    m_lastTimePsrt1: 2140411931
-    m_lastTimePart2: -1999382396
+    m_lastTimePsrt1: 883335676
+    m_lastTimePart2: -1999382395
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A4AC25EF-E508-4944-ADCD-3BB956A85491}'
-    m_lastTimePsrt1: 2140391930
-    m_lastTimePart2: -1999382396
+    m_lastTimePsrt1: 883315675
+    m_lastTimePart2: -1999382395
     List:
     - Name: Main
       Path: Default Work Unit\Main

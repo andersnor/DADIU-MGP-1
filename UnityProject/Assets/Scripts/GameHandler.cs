@@ -92,8 +92,12 @@ public class GameHandler{
         switch (mode)
         {
             case 0:
+                // Death by silence
+                SceneManager.LoadScene("EndSceneMusic");
                 break;
             case 1:
+                // Death by ghost
+                SceneManager.LoadScene("EndSceneGhost");
                 break;
         }
     }
