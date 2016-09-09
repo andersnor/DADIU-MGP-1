@@ -25,6 +25,7 @@ public class RandomMusicSpawn : MonoBehaviour {
     {
         if(col.tag == "Player")
         {
+			Debug.Log (1);
         SpawnRandomOutRange();
         spawnRange += rangeIncrease;
         //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
