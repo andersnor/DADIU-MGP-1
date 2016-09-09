@@ -8,7 +8,8 @@ public class testmove : MonoBehaviour {
     float speed = 0.14f;
     float stepwait=0;
     public float step = 0f;
-    float distanceFromBack; // tidligere Front
+    float distanceFromBack; // tidligere Front  
+    float distanceFromFront; 
     private int next_point=-1;
     public bool rotate= false;
     public bool imNoChild = false;
@@ -22,20 +23,26 @@ public class testmove : MonoBehaviour {
     // Use this for initialization
     void Start () {
         if (!imNoChild)
-            trueDad = FindTrueDad(transform); //.GetChild(7)
+            trueDad = FindTrueDad(transform).GetChild(2).GetChild(1);//For at komme til taill_end_jnt //.GetChild(7)
         else
             trueDad = transform;
         if (!imNoDad)
             TrueChild = FindTrueChild(transform);
         else
             TrueChild = transform;
-        bezCurve = GameObject.Find("BezierCurve").GetComponent<BezierCurve>();
+        bezCurve = GameObject.Find("BezierCurve").GetComponent<BezierCurve>(); // VIGTIGT HVIS DER ER FLERE!?!
         print(bezCurve.pointCount);
-        distanceFromBack = Vector3.Distance(transform.position, TrueChild.position);
+        if (!imNoChild)
+            distanceFromFront = Vector3.Distance(transform.position, trueDad.position);  //distanceFromBack = Vector3.Distance(transform.position, TrueChild.position);
+        else
+            distanceFromFront = Vector3.Distance(transform.position, GameObject.Find("taill_end_jnt").transform.position);
         //step = transform.parent.GetComponent<testmove>().step;
-        step = distanceFromBack / bezCurve.length;
+            step = distanceFromFront / bezCurve.length;//step = distanceFromBack / bezCurve.length;
         findMyOwnRotation = transform.rotation * trueDad.rotation;
-        print("my name is: " + gameObject + "and my child is " + TrueChild + "and my rotation is " + findMyOwnRotation);
+
+
+
+        print("my name is: " + gameObject + "and my child is " + trueDad + "and my distance is " + distanceFromFront);
         
     }
 
@@ -44,13 +51,9 @@ public class testmove : MonoBehaviour {
         if (!stop)
         {
             step += speed * Time.deltaTime;
-
-            //}
-
-            transform.position = bezCurve.GetPointAt(step);
+            transform.position = new Vector3(bezCurve.GetPointAt(step).x,transform.position.y, bezCurve.GetPointAt(step).z);
             if (rotate)
             {
-                //            Vector3 newDir = Vector3.RotateTowards(transform.forward, bezCurve.GetPointAt(step), step, 0.0F);
                 // DET ER OMVENDT FORDI JOINTET ER OMVENDT !!!!
                 if (!tail)
                     transform.rotation = Quaternion.LookRotation(bezCurve.GetPointAt(step + speed * Time.deltaTime) - transform.position) * findMyOwnRotation;

@@ -48,7 +48,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 2089708342
       Guid: e11e2c2a9f5be84bb822e092ee8f6776
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: MusicBox_Stop
       Path: Default Work Unit\MusicBox_Stop
       PathAndIcons:
