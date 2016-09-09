@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e09a34fd2ac966c408a276f4bebadd1f
-timeCreated: 1473407865
+guid: 24f64721131673e4b89ef3b779a9a038
+timeCreated: 1473428259
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -17,7 +17,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 1
     externalNormalMap: 1
-    heightScale: 0.127
+    heightScale: 0.07
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -48,12 +48,7 @@ TextureImporter:
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 1
-  buildTargetSettings:
-  - buildTarget: Android
-    maxTextureSize: 2048
-    textureFormat: -1
-    compressionQuality: 50
-    allowsAlphaSplitting: 0
+  buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
     sprites: []

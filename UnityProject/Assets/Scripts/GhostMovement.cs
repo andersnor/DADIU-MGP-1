@@ -29,7 +29,7 @@ public class GhostMovement : MonoBehaviour {
     Collider surface;
 
     void Start () {
-        surfDist = 0 - transform.position.y * 2 + 0.005f;
+        surfDist = 0 - transform.position.y + 0.005f;
         surface = GameObject.Find("Terrain").GetComponent<Collider>();
         printOffset = feetDistance / 2;
         Transform idleLookUp = GameObject.Find("idleTargets").transform;
@@ -76,12 +76,13 @@ public class GhostMovement : MonoBehaviour {
         }
         newPrint.transform.SetParent(transform);
         if (foot)
-            newPrint.transform.localPosition = new Vector3(-printOffset, surfDist, 0);
+            newPrint.transform.localPosition = new Vector3(-printOffset, 0, 0);
         else
-            newPrint.transform.localPosition = new Vector3(printOffset, surfDist, 0);
+            newPrint.transform.localPosition = new Vector3(printOffset, 0, 0);
         newPrint.transform.rotation = transform.rotation;
         newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO
         newPrint.transform.SetParent(null);
+        newPrint.transform.position = new Vector3(newPrint.transform.position.x, 0.005f, transform.position.z);
         foot =! foot;
     }
     void musicBoxWind()
