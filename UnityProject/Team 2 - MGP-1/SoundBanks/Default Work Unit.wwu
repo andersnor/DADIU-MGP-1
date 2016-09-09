@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A4AC25EF-E508-4944-ADCD-3BB956A85491}" SchemaVersion="72">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{A4AC25EF-E508-4944-ADCD-3BB956A85491}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{7D1627F3-753C-4D75-8191-B275F1303CB3}">
+					<ObjectInclusionList>
+						<ObjectRef Name="MusicBox_Stop" ID="{E0DD3D61-FE66-42CD-A293-225FE9CCFEEC}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Footsteps_Player" ID="{74AA77B7-C571-446F-8DDF-CDDEF9F70105}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MusicBox_Play" ID="{2A2C1EE1-5B9F-4BE8-B822-E092EE8F6776}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Footsteps_Enemy" ID="{2BDEB7E9-A6D9-4DAA-ADB9-29269B5AC663}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
