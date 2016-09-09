@@ -28,9 +28,9 @@ public class PlayerPrint : MonoBehaviour {
         }
         newPrint.transform.SetParent(transform);
         if (foot)
-            newPrint.transform.localPosition = new Vector3(-printOffSet, 0, 0);
+            newPrint.transform.localPosition = new Vector3(-printOffSet, -GetComponent<Collider>().bounds.extents.y, 0);
         else
-            newPrint.transform.localPosition = new Vector3(printOffSet, 0, 0);
+            newPrint.transform.localPosition = new Vector3(printOffSet, -GetComponent<Collider>().bounds.extents.y, 0);
         newPrint.transform.localRotation = transform.rotation;
         newPrint.transform.SetParent(null);
         foot = !foot;
