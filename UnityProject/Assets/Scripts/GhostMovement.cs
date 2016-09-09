@@ -18,7 +18,7 @@ public class GhostMovement : MonoBehaviour {
     [Header("Distance between ghost feet (m):")]
     [SerializeField]
     float feetDistance;
-    float printOffset;
+    float printOffset, surfDist;
 
     Vector3 prevPos;
     GhostPrintPool printPool;
@@ -26,8 +26,11 @@ public class GhostMovement : MonoBehaviour {
 
     NavMeshAgent agent;
     Transform[] randTar;
+    Collider surface;
 
     void Start () {
+        surfDist = 0 - transform.position.y * 2 + 0.005f;
+        surface = GameObject.Find("Terrain").GetComponent<Collider>();
         printOffset = feetDistance / 2;
         Transform idleLookUp = GameObject.Find("idleTargets").transform;
         randTar = new Transform[idleLookUp.childCount];
@@ -73,9 +76,9 @@ public class GhostMovement : MonoBehaviour {
         }
         newPrint.transform.SetParent(transform);
         if (foot)
-            newPrint.transform.localPosition = new Vector3(-printOffset, -GetComponent<Collider>().bounds.extents.y * 2, 0);
+            newPrint.transform.localPosition = new Vector3(-printOffset, surfDist, 0);
         else
-            newPrint.transform.localPosition = new Vector3(printOffset, -GetComponent<Collider>().bounds.extents.y * 2, 0);
+            newPrint.transform.localPosition = new Vector3(printOffset, surfDist, 0);
         newPrint.transform.rotation = transform.rotation;
         newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO
         newPrint.transform.SetParent(null);
