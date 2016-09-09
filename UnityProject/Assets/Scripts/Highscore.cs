@@ -1,18 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Highscore : MonoBehaviour {
+public class Highscore {
 
     public float beg;
 
-	// Use this for initialization
-	void Start (){
+    public Highscore()
+    {
         beg = Time.time;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
+    }
 
     public float getScore()
     {

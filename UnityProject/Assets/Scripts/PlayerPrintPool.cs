@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerPrintPool : MonoBehaviour {
-    public GameObject printPrefab;
+    GameObject printPrefab;
     GameObject[] printPool;
     [Header("Amount of maximum visible player-prints:")]
     [SerializeField]

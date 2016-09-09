@@ -9,7 +9,8 @@ public class GameHandler{
     public GameObject ghost;
     public GameObject snake;
     public GameObject musicBox;
-    public GameObject highscore;
+
+    public Highscore highscore;
 
     public delegate void MusicBoxRewind();
     public event MusicBoxRewind OnMusicBoxRewind;
@@ -80,4 +81,20 @@ public class GameHandler{
             OnGhostAttack();
     }
 
+    public void GameOver(int mode) {
+
+        switch (mode)
+        {
+            case 0:
+                break;
+            case 1:
+                break;
+        }
+    }
+
+
+    public void StartTime()
+    {
+        highscore = new Highscore();
+    }
 }

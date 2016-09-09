@@ -5,14 +5,16 @@ public class PlayerPrint : MonoBehaviour {
     [Header("Distance between player-feet(m):")]
     [SerializeField]
     float feetDistance;
-    float printOffSet;
+    float printOffset, surfDist;
     PlayerPrintPool printPool;
     bool foot = false; //True = left, false = right
+    Collider surface;
 
-    // Use this for initialization
     void Start () {
+        surfDist = 0 - transform.position.y * 2 + 0.005f;
+        surface = GameObject.Find("Terrain").GetComponent<Collider>();
         printPool = GameObject.Find("_SCRIPTS").GetComponent<PlayerPrintPool>();
-        printOffSet = feetDistance / 2;
+        printOffset = feetDistance / 2;
         GameHandler.instance.OnPlayerStep += spawnStep;
 	}
 
@@ -28,10 +30,11 @@ public class PlayerPrint : MonoBehaviour {
         }
         newPrint.transform.SetParent(transform);
         if (foot)
-            newPrint.transform.localPosition = new Vector3(-printOffSet, -GetComponent<Collider>().bounds.extents.y, 0);
+            newPrint.transform.localPosition = new Vector3(-printOffset, surfDist, 0);
         else
-            newPrint.transform.localPosition = new Vector3(printOffSet, -GetComponent<Collider>().bounds.extents.y, 0);
-        newPrint.transform.localRotation = transform.rotation;
+            newPrint.transform.localPosition = new Vector3(printOffset, surfDist, 0);
+        newPrint.transform.rotation = transform.rotation;
+        newPrint.GetComponent<AkAmbient>().triggered(); // PLAY AUDIO
         newPrint.transform.SetParent(null);
         foot = !foot;
     }
