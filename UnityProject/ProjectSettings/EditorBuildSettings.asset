@@ -8,4 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartupScreen.unity
   - enabled: 1
-    path: Assets/Scenes/Playable Prototype.unity
+    path: Assets/Scenes/Gray box test lvl.unity

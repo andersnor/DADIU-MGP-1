@@ -56,8 +56,6 @@ public class GhostMovement : MonoBehaviour {
             agent.speed = walkSpeed;
             followTimeout = 0;
         }
-
-        agent.destination = followTar.position;
     }
 
     void spawnStep()
@@ -87,6 +85,7 @@ public class GhostMovement : MonoBehaviour {
     void UpdPlayerPos()
     {
         followTimeout = 0;
+        agent.speed = followSpeed;
         agent.destination = followTar.position;
     }
     void MBoxWinded()
