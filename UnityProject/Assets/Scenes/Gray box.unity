@@ -513,7 +513,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &1631770567
+--- !u!1001 &1652019305
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -551,15 +551,6 @@ Prefab:
     - target: {fileID: 4000012804521142, guid: 3823f05723618984485b4ab0bcaaedfc, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011473926768, guid: 3823f05723618984485b4ab0bcaaedfc,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1331280286}
-    - target: {fileID: 1000013633276612, guid: 3823f05723618984485b4ab0bcaaedfc, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3823f05723618984485b4ab0bcaaedfc, type: 2}
@@ -720,6 +711,10 @@ Prefab:
         type: 2}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012888506654, guid: 1db74632ed5d43041886aee2596d52d9, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65000013950188274, guid: 1db74632ed5d43041886aee2596d52d9, type: 2}
