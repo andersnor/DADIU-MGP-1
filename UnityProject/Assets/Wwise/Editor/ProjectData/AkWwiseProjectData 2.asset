@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76b17f0ec7a3f4f4ca2a43d6a154da8b, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 2
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
@@ -48,7 +48,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 2089708342
       Guid: e11e2c2a9f5be84bb822e092ee8f6776
-      maxAttenuation: 95
+      maxAttenuation: 0
     - Name: MusicBox_Stop
       Path: Default Work Unit\MusicBox_Stop
       PathAndIcons:
@@ -73,22 +73,22 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}'
-    m_lastTimePsrt1: 864924623
-    m_lastTimePart2: -1999382395
+    m_lastTimePsrt1: 1079820998
+    m_lastTimePart2: -1999382533
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{5F6B6170-6ABC-420D-8118-1B94B3A46F6B}'
-    m_lastTimePsrt1: 883335676
-    m_lastTimePart2: -1999382395
+    m_lastTimePsrt1: 1125573615
+    m_lastTimePart2: -1999382533
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{39DC731D-19C4-43EF-817C-731414E9FD9C}'
-    m_lastTimePsrt1: 883335676
-    m_lastTimePart2: -1999382395
+    m_lastTimePsrt1: 1125583616
+    m_lastTimePart2: -1999382533
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -106,8 +106,7 @@ MonoBehaviour:
         ObjectType: 7
       ID: -760297672
       Guid: 23579918438f6a4a90238a271cb8d6ff
-  ExpandedItems:
-  - /Team 2 - MGP-1
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
