@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b17f0ec7a3f4f4ca2a43d6a154da8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e2f31cb77c0b3447984a5aa2559cc42, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 

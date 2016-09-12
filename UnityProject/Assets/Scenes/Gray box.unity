@@ -563,6 +563,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!1 &849583350 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012447537746, guid: 1db74632ed5d43041886aee2596d52d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1508589505}
 --- !u!1 &974827434
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,14 +596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7abc569c934641c42aef11a3d6a2d9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio\GeneratedSoundBanks
-  language: English(US)
-  defaultPoolSize: 4096
-  lowerPoolSize: 2048
-  streamingPoolSize: 1024
-  preparePoolSize: 0
-  memoryCutoffThreshold: 0.95
-  engineLogging: 1
 --- !u!114 &974827436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,6 +1065,17 @@ Prefab:
       propertyPath: drag
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011014166372, guid: 1db74632ed5d43041886aee2596d52d9,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1000012888506654, guid: 1db74632ed5d43041886aee2596d52d9,
+        type: 2}
+    - target: {fileID: 114000011014166372, guid: 1db74632ed5d43041886aee2596d52d9,
+        type: 2}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 849583350}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1db74632ed5d43041886aee2596d52d9, type: 2}
   m_IsPrefabParent: 0
