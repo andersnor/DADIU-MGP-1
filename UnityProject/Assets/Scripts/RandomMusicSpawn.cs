@@ -44,10 +44,24 @@ public class RandomMusicSpawn : MonoBehaviour {
 
     public void spawnRandomInRange()
     {
+        spawnRange -= rangeIncrease;
+        GameObject[] allPoints = GameObject.FindGameObjectsWithTag(musicSpawnTag);
         List<GameObject> insideRange = sortOutTooClose(getMusicSpawns(Physics.OverlapSphere(player.transform.position, spawnRange)));
         if (insideRange.Count > 0)
         {
             transform.position = insideRange[Random.Range(0, insideRange.Count)].transform.position;
+
+            if (debug)
+            {
+                for (int i = 0; i < allPoints.Length; i++)
+                {
+                    allPoints[i].gameObject.GetComponent<Renderer>().material.color = Color.black;
+                }
+                for (int i = 0; i < insideRange.Count; i++)
+                {
+                    insideRange[i].gameObject.GetComponent<Renderer>().material.color = Color.red;
+                }
+            }
         }
         else
         {
