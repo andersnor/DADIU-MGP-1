@@ -3,15 +3,27 @@ using System.Collections;
 
 public class Highscore {
 
-    public float beg;
+    private int score = 0;
 
-    public Highscore()
+    public int GetScore()
     {
-        beg = Time.time;
+        return score;
     }
 
-    public float getScore()
+    public int GetHighscore()
     {
-        return Time.time - beg;
+        return PlayerPrefs.GetInt("Highscore");
+    }
+
+    public void UpdateHighscore()
+    {
+        if (score > GetHighscore())
+            PlayerPrefs.SetInt("Highscore",score);
+    }
+
+    public void IncrementScore()
+    {
+        score++;
     }
 }
+
