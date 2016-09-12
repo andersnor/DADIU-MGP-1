@@ -12,7 +12,6 @@ public class RandomMusicSpawn : MonoBehaviour {
     public bool debug;
     string musicSpawnTag = "MusicSpawn";
     public int spawnInside;
-    private bool visible;
 
     public int playTime = 60;
     private float timestamp;
@@ -24,6 +23,8 @@ public class RandomMusicSpawn : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+
         if (timestamp + playTime < Time.time)
         {
             GameHandler.instance.TriggerMusicBoxTimeout();
@@ -34,19 +35,22 @@ public class RandomMusicSpawn : MonoBehaviour {
     {
         if(col.tag == "Player")
         {
-            if (visible)
+            timestamp = Time.time;
+
+            if (spawnInside-- > 0)
             {
-                timestamp = Time.time;
-                SpawnRandomOutRange();
-                spawnRange += rangeIncrease;
+                spawnRandomInRange();
             }
+            else
+            {
+                GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
+                SpawnRandomOutRange();
+            }
+
+            spawnRange += rangeIncrease;
+            GameHandler.instance.highscore.IncrementScore();
             //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
         }
-    }
-
-    private bool Visible()
-    {
-        return gameObject.GetComponent<Renderer>().isVisible;
     }
 
     public void spawnRandomInRange()
@@ -78,12 +82,6 @@ public class RandomMusicSpawn : MonoBehaviour {
 
     public void SpawnRandomOutRange()
     {
-        if(spawnInside > 0)
-        {
-            spawnRandomInRange();
-            spawnInside--;
-            return;
-        }
         GameObject[] allPoints = GameObject.FindGameObjectsWithTag(musicSpawnTag);
         List<GameObject> inRange = getMusicSpawns(Physics.OverlapSphere(player.transform.position, spawnRange));
         List<GameObject> outRange = getOutRange(allPoints);

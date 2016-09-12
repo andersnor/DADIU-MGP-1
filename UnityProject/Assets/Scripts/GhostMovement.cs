@@ -7,7 +7,7 @@ public class GhostMovement : MonoBehaviour {
     public Transform followTar;
     [SerializeField]
     float stepThold, idleTimer;
-    float dist = 0, followTimeout = 0;
+    float dist = 0, followTimeout = float.MaxValue;
     [Header("Ghost movement variables")]
     [SerializeField]
     float sprintSpeed;
@@ -19,6 +19,7 @@ public class GhostMovement : MonoBehaviour {
     [SerializeField]
     float feetDistance;
     float printOffset, surfDist;
+    private bool isSprinting = false, isChasingPlayer = false;
 
     Vector3 prevPos;
     GhostPrintPool printPool;
@@ -29,6 +30,7 @@ public class GhostMovement : MonoBehaviour {
     Collider surface;
 
     void Start () {
+        GameHandler.instance.ghost = gameObject;
         surfDist = 0 - transform.position.y + 0.005f;
         surface = GameObject.Find("Terrain").GetComponent<Collider>();
         printOffset = feetDistance / 2;
@@ -38,9 +40,6 @@ public class GhostMovement : MonoBehaviour {
             randTar[i] = idleLookUp.GetChild(i);
         printPool = GameObject.Find("_SCRIPTS").GetComponent<GhostPrintPool>();
         agent = GetComponent<NavMeshAgent>();
-        GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
-        GameHandler.instance.OnPlayerStep += UpdPlayerPos;
-        GameHandler.instance.OnMusicBoxRewinded += MBoxWinded;
     }
 	void Awake()
     {
@@ -56,7 +55,7 @@ public class GhostMovement : MonoBehaviour {
             GameHandler.instance.TriggerGhostStep();
         }
         followTimeout += 1 * Time.deltaTime;
-        if (followTimeout > idleTimer)
+        if (followTimeout > idleTimer && !isSprinting)
         {
             agent.destination = randTar[Random.Range(0, randTar.Length)].position;
             agent.speed = walkSpeed;
@@ -93,15 +92,16 @@ public class GhostMovement : MonoBehaviour {
     {
         agent.destination = followTar.position;
         agent.speed = sprintSpeed;
-        idleTimer = -100;
+        isSprinting = true;
     }
-    void UpdPlayerPos()
+    void musicBoxWinded()
     {
         followTimeout = 0;
         agent.speed = followSpeed;
         agent.destination = followTar.position;
+        isSprinting = false;
     }
-    void MBoxWinded()
+    void updatePlayerPos()
     {
         followTimeout = 0;
         agent.speed = followSpeed;
@@ -111,7 +111,19 @@ public class GhostMovement : MonoBehaviour {
     void OnDestroy()
     {
         GameHandler.instance.OnMusicBoxRewind -= musicBoxWind;
-        GameHandler.instance.OnPlayerStep -= UpdPlayerPos;
-        GameHandler.instance.OnMusicBoxRewinded -= MBoxWinded;
+        GameHandler.instance.OnMusicBoxRewinded -= musicBoxWinded;
+        GameHandler.instance.OnPlayerStep -= updatePlayerPos;
+    }
+
+    public void ChasePlayer()
+    {
+        if (!isChasingPlayer)
+        {
+            isChasingPlayer = true;
+            followTimeout = 0;
+            GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
+            GameHandler.instance.OnMusicBoxRewinded += musicBoxWinded;
+            GameHandler.instance.OnPlayerStep += updatePlayerPos;
+        }
     }
 }

@@ -342,7 +342,8 @@ PlayerSettings:
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
   scriptingDefineSymbols:
-    7: 250
+    1: 
+    7: 
   metroPackageName: DADIU MGP 1
   metroPackageVersion: 
   metroCertificatePath: 
