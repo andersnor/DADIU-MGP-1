@@ -430,8 +430,8 @@ MonoBehaviour:
   minSpawnRange: 0
   player: {fileID: 1807029160}
   rangeIncrease: 1
-  debug: 0
-  spawnInside: 2
+  debug: 1
+  spawnInside: 10
   playTime: 60
 --- !u!1 &604588690
 GameObject:
