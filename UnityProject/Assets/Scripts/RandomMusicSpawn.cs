@@ -33,7 +33,7 @@ public class RandomMusicSpawn : MonoBehaviour {
     {
         if(col.tag == "Player")
         {
-            if (Visible())
+            if (Visible() && timestamp != Time.time)
             {
                 timestamp = Time.time;
 
