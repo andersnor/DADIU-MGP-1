@@ -23,8 +23,6 @@ public class RandomMusicSpawn : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
-
         if (timestamp + playTime < Time.time)
         {
             GameHandler.instance.TriggerMusicBoxTimeout();
@@ -35,22 +33,30 @@ public class RandomMusicSpawn : MonoBehaviour {
     {
         if(col.tag == "Player")
         {
-            timestamp = Time.time;
-
-            if (spawnInside-- > 0)
+            if (Visible())
             {
-                spawnRandomInRange();
-            }
-            else
-            {
-                SpawnRandomOutRange();
-            }
+                timestamp = Time.time;
 
-            spawnRange += rangeIncrease;
-            GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
-            GameHandler.instance.highscore.IncrementScore();
-            //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
+                if (spawnInside-- > 0)
+                {
+                    spawnRandomInRange();
+                }
+                else
+                {
+                    GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
+                    SpawnRandomOutRange();
+                }
+
+                spawnRange += rangeIncrease;
+                GameHandler.instance.highscore.IncrementScore();
+                //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
+            }
         }
+    }
+
+    private bool Visible()
+    {
+        return gameObject.GetComponent<Renderer>().isVisible;
     }
 
     public void spawnRandomInRange()
