@@ -11,6 +11,7 @@ public class RandomMusicSpawn : MonoBehaviour {
     public float rangeIncrease;
     public bool debug;
     string musicSpawnTag = "MusicSpawn";
+    public int spawnInside;
 
     public int playTime = 60;
     private float timestamp;
@@ -41,8 +42,41 @@ public class RandomMusicSpawn : MonoBehaviour {
         }
     }
 
-    private void SpawnRandomOutRange()
+    public void spawnRandomInRange()
     {
+        spawnRange -= rangeIncrease;
+        GameObject[] allPoints = GameObject.FindGameObjectsWithTag(musicSpawnTag);
+        List<GameObject> insideRange = sortOutTooClose(getMusicSpawns(Physics.OverlapSphere(player.transform.position, spawnRange)));
+        if (insideRange.Count > 0)
+        {
+            transform.position = insideRange[Random.Range(0, insideRange.Count)].transform.position;
+
+            if (debug)
+            {
+                for (int i = 0; i < allPoints.Length; i++)
+                {
+                    allPoints[i].gameObject.GetComponent<Renderer>().material.color = Color.black;
+                }
+                for (int i = 0; i < insideRange.Count; i++)
+                {
+                    insideRange[i].gameObject.GetComponent<Renderer>().material.color = Color.red;
+                }
+            }
+        }
+        else
+        {
+            transform.position = findClosest(sortOutTooClose(GameObject.FindGameObjectsWithTag(musicSpawnTag)), gameObject).transform.position;
+        }
+    }
+
+    public void SpawnRandomOutRange()
+    {
+        if(spawnInside > 0)
+        {
+            spawnRandomInRange();
+            spawnInside--;
+            return;
+        }
         GameObject[] allPoints = GameObject.FindGameObjectsWithTag(musicSpawnTag);
         List<GameObject> inRange = getMusicSpawns(Physics.OverlapSphere(player.transform.position, spawnRange));
         List<GameObject> outRange = getOutRange(allPoints);
@@ -127,5 +161,40 @@ public class RandomMusicSpawn : MonoBehaviour {
         }
 
         return result;
+    }
+
+    private List<GameObject> sortOutTooClose(List<GameObject> list)
+    {
+        List<GameObject> result = new List<GameObject>();
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            if (Vector3.Distance(list[i].transform.position, player.transform.position) > minSpawnRange)
+            {
+                result.Add(list[i]);
+            }
+        }
+
+        return result;
+    }
+
+    private GameObject findClosest(List<GameObject> list, GameObject obj)
+    {
+        if (list.Count > 0)
+        {
+            GameObject result = list[0];
+            float dist = Vector3.Distance(list[0].transform.position, obj.transform.position);
+            for(int i = 0; i < list.Count; i++)
+            {
+                float tempDist = Vector3.Distance(list[i].transform.position, obj.transform.position);
+                if (tempDist < dist)
+                {
+                    result = list[i];
+                    dist = tempDist;
+                }
+            }
+            return result;
+        }
+        else return null;
     }
 }

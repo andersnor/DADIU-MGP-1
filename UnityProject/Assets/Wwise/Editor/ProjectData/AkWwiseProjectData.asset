@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b17f0ec7a3f4f4ca2a43d6a154da8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b65d8ef5aff16c458b64a13fcd89b92, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CF5F4A71-9F0C-4006-A3D8-C505900F160C}'
-    m_lastTimePsrt1: 305064127
-    m_lastTimePart2: -1999381787
+    m_lastTimePsrt1: -1327203146
+    m_lastTimePart2: -1999381797
     List:
     - Name: Footsteps_Enemy
       Path: Default Work Unit\Footsteps_Enemy
@@ -73,29 +73,29 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}'
-    m_lastTimePsrt1: 314394661
-    m_lastTimePart2: -1999381787
+    m_lastTimePsrt1: -674329262
+    m_lastTimePart2: -1999382347
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{5F6B6170-6ABC-420D-8118-1B94B3A46F6B}'
-    m_lastTimePsrt1: 385118706
-    m_lastTimePart2: -1999381787
+    m_lastTimePsrt1: -644337547
+    m_lastTimePart2: -1999382347
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{39DC731D-19C4-43EF-817C-731414E9FD9C}'
-    m_lastTimePsrt1: 385128707
-    m_lastTimePart2: -1999381787
+    m_lastTimePsrt1: -644337547
+    m_lastTimePart2: -1999382347
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A4AC25EF-E508-4944-ADCD-3BB956A85491}'
-    m_lastTimePsrt1: 385108706
-    m_lastTimePart2: -1999381787
+    m_lastTimePsrt1: -1318122626
+    m_lastTimePart2: -1999381797
     List:
     - Name: Main_01
       Path: Default Work Unit\Main_01
