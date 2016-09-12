@@ -23,15 +23,6 @@ public class RandomMusicSpawn : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Visible())
-        {
-            print("Yes");
-        }
-        else
-        {
-            print("No");
-        }
-
         if (timestamp + playTime < Time.time)
         {
             GameHandler.instance.TriggerMusicBoxTimeout();
