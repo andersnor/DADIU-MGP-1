@@ -12,7 +12,6 @@ public class Gyroscope : MonoBehaviour
     [SerializeField]
     float movementSpeed = 150.0f;
     [SerializeField]
-    float drag = 0.9f;
     private Vector3 currentOrientation;
 
     [Header("Distance between player-steps (m):")]
@@ -25,20 +24,25 @@ public class Gyroscope : MonoBehaviour
     private float appliedGyroYAngle = 0f;
     private float calibrationYAngle = 0f;
 
-
     void Start()
     {
+        GameHandler.instance.player = gameObject;
         rid = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
     }
 
-void FixedUpdate()
+    void Update()
     {
         ApplyGyroRotation();
         ApplyCalibration();
+    }
 
+    void FixedUpdate()
+    {
+        if (playerCamera.GetComponent<InitCamMove>().enabled)
+            return;
         //Check for touch input and set movement to true
         if (Input.touchCount < 2)
         {
@@ -57,8 +61,7 @@ void FixedUpdate()
         }
         else if (Input.touchCount == 0)
         {
-            rid.velocity = rid.velocity * (1 - drag * Time.deltaTime);
-            //Debug.Log("notouch");
+            rid.velocity = Vector3.zero;
         }
 
         //Footsteps following the player
@@ -69,7 +72,6 @@ void FixedUpdate()
             dist = 0;
             GameHandler.instance.TriggerPlayerStep();
         }
-
     }
     public void CalibrateYAngle()
     {
@@ -80,7 +82,7 @@ void FixedUpdate()
     {
         playerCamera.transform.rotation = Input.gyro.attitude;
         playerCamera.transform.Rotate(0f, 0f, 180f, Space.Self); // Swap "handedness" of quaternion from gyro.
-        playerCamera. transform.Rotate(90f, 180f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
+        playerCamera.transform.Rotate(90f, 0f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
         appliedGyroYAngle = transform.eulerAngles.y; // Save the angle around y axis for use in calibration.
     }
 
@@ -88,6 +90,5 @@ void FixedUpdate()
     {
         playerCamera.transform.Rotate(0f, -calibrationYAngle, 0f, Space.World); // Rotates y angle back however much it deviated when calibrationYAngle was saved.
     }
-
 
 }

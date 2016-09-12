@@ -22,9 +22,7 @@ public class InitCamMove : MonoBehaviour {
    
     Vector3 dir, initPos;
 
-
     void Start () {
-
         deltaZoom = Mathf.Abs((int)initialZoom_FOV-endZoom_FOV);
         mBox = GameObject.Find("MusicBox").transform;
         player = GameObject.Find("Player").transform;
@@ -34,18 +32,21 @@ public class InitCamMove : MonoBehaviour {
         dist = Vector3.Distance(initPos, player.position);
         dir = (initPos - player.position).normalized;
         transform.LookAt(mBox);
-	
-	}
+    }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
+
         normTime += 1 * Time.deltaTime / timeToMove;
         transform.position = initPos - dir * dist * accelerationCurve.Evaluate(normTime);
         if (useCurveForZoom)
             zoomSpeed = accelerationCurve.Evaluate(normTime);
         else
             zoomSpeed = normTime;
+
+        transform.rotation = Quaternion.Lerp(player.rotation, transform.rotation, zoomSpeed);
+        //GameHandler.instance.player.GetComponent<Gyroscope>().ApplyCalibration();
         GetComponent<Camera>().fieldOfView = initialZoom_FOV + deltaZoom * zoomSpeed;
         if (normTime > 1)
         {

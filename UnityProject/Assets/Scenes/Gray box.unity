@@ -338,6 +338,11 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012460243986, guid: ac8e5ecbf34167c49abe7bf69604c245,
+        type: 2}
+      propertyPath: spawnInside
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac8e5ecbf34167c49abe7bf69604c245, type: 2}
   m_IsPrefabParent: 0
@@ -821,7 +826,7 @@ Prefab:
     - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
         type: 2}
       propertyPath: idleTimer
-      value: 1.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
         type: 2}
@@ -1204,6 +1209,38 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1647082655}
   m_Enabled: 1
+--- !u!114 &1647082667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647082655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4d961e8415ea64e8354b8a7fe70b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialZoom_FOV: 60
+  endZoom_FOV: 60
+  startDistToBox: 2
+  timeToMove: 6
+  accelerationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0.21666667
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  useCurveForZoom: 1
 --- !u!1001 &1673311834
 Prefab:
   m_ObjectHideFlags: 0
