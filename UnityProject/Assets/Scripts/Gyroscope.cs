@@ -23,6 +23,7 @@ public class Gyroscope : MonoBehaviour
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
     private float calibrationYAngle = 0f;
+    InitCamMove initCamMove;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class Gyroscope : MonoBehaviour
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
+        initCamMove = playerCamera.GetComponent<InitCamMove>();
     }
 
     void Update()
@@ -41,7 +43,7 @@ public class Gyroscope : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerCamera.GetComponent<InitCamMove>().enabled)
+        if (initCamMove && initCamMove.enabled)
             return;
         //Check for touch input and set movement to true
         if (Input.touchCount < 2)
