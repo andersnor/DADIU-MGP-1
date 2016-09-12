@@ -36,8 +36,14 @@ public class RandomMusicSpawn : MonoBehaviour {
         if(col.tag == "Player")
         {
             timestamp = Time.time;
-            SpawnRandomOutRange();
+
+            if (spawnInside-- > 0)
+                spawnRandomInRange();
+            else
+                SpawnRandomOutRange();
+
             spawnRange += rangeIncrease;
+            GameHandler.instance.highscore.IncrementScore();
             //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
         }
     }
@@ -71,12 +77,6 @@ public class RandomMusicSpawn : MonoBehaviour {
 
     public void SpawnRandomOutRange()
     {
-        if(spawnInside > 0)
-        {
-            spawnRandomInRange();
-            spawnInside--;
-            return;
-        }
         GameObject[] allPoints = GameObject.FindGameObjectsWithTag(musicSpawnTag);
         List<GameObject> inRange = getMusicSpawns(Physics.OverlapSphere(player.transform.position, spawnRange));
         List<GameObject> outRange = getOutRange(allPoints);
