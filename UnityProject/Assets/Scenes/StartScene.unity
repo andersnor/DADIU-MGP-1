@@ -303,14 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7abc569c934641c42aef11a3d6a2d9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio\GeneratedSoundBanks
-  language: English(US)
-  defaultPoolSize: 4096
-  lowerPoolSize: 2048
-  streamingPoolSize: 1024
-  preparePoolSize: 0
-  memoryCutoffThreshold: 0.95
-  engineLogging: 1
 --- !u!114 &322978079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710423440b9265f48b8c17bee8b963f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenerId: 0
 --- !u!124 &391517122
 Behaviour:
   m_ObjectHideFlags: 0
@@ -968,7 +959,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Gray box test lvl
+          m_StringArgument: Gray box
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

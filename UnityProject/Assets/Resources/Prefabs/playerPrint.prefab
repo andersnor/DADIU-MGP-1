@@ -22,8 +22,6 @@ GameObject:
   - 33: {fileID: 33000010341346594}
   - 64: {fileID: 64000011935214124}
   - 23: {fileID: 23000012426674622}
-  - 114: {fileID: 114000013675717478}
-  - 114: {fileID: 114000012254815624}
   - 54: {fileID: 54000011098622496}
   - 82: {fileID: 82000013002314412}
   m_Layer: 0
@@ -183,44 +181,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114000012254815624
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011370125446}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 123587c0b60a0a145b455f92a0e1b593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  valueGuid: b777aa7471c56f448ddfcddef9f70105
-  eventID: 196357682
-  soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  transitionDuration: 0
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  multiPositionTypeLabel: 0
-  multiPositionArray: []
---- !u!114 &114000013675717478
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011370125446}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4313441b095aae949b6d9063f21374b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_positionOffsetData:
-    positionOffset: {x: 0, y: 0, z: 0}
-    KeepMe: 0
-  isEnvironmentAware: 1
-  listenerMask: 1
-  isStaticObject: 0

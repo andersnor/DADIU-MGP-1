@@ -43,7 +43,7 @@ public class PlayerPrint : MonoBehaviour {
 
     void OnDestroy()
     {
-        print("destroy");
+     //   print("destroy");
         GameHandler.instance.OnPlayerStep -= spawnStep;
     }
 }
