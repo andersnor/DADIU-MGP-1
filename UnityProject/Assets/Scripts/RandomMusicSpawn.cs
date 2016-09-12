@@ -43,12 +43,12 @@ public class RandomMusicSpawn : MonoBehaviour {
                 }
                 else
                 {
-                    GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
                     SpawnRandomOutRange();
                 }
 
                 spawnRange += rangeIncrease;
                 GameHandler.instance.highscore.IncrementScore();
+                GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
                 //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
             }
         }
