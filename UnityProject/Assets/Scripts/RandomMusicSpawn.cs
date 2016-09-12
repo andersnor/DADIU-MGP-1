@@ -38,9 +38,14 @@ public class RandomMusicSpawn : MonoBehaviour {
             timestamp = Time.time;
 
             if (spawnInside-- > 0)
+            {
                 spawnRandomInRange();
+            }
             else
+            {
+                GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
                 SpawnRandomOutRange();
+            }
 
             spawnRange += rangeIncrease;
             GameHandler.instance.highscore.IncrementScore();

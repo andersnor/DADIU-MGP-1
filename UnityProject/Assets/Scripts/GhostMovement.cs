@@ -19,7 +19,7 @@ public class GhostMovement : MonoBehaviour {
     [SerializeField]
     float feetDistance;
     float printOffset, surfDist;
-    bool isSprinting = false;
+    private bool isSprinting = false, isChasingPlayer = false;
 
     Vector3 prevPos;
     GhostPrintPool printPool;
@@ -30,6 +30,7 @@ public class GhostMovement : MonoBehaviour {
     Collider surface;
 
     void Start () {
+        GameHandler.instance.ghost = gameObject;
         surfDist = 0 - transform.position.y + 0.005f;
         surface = GameObject.Find("Terrain").GetComponent<Collider>();
         printOffset = feetDistance / 2;
@@ -114,11 +115,15 @@ public class GhostMovement : MonoBehaviour {
         GameHandler.instance.OnPlayerStep -= updatePlayerPos;
     }
 
-    void Enable()
+    public void ChasePlayer()
     {
-        followTimeout = 0;
-        GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
-        GameHandler.instance.OnMusicBoxRewinded += musicBoxWinded;
-        GameHandler.instance.OnPlayerStep += updatePlayerPos;
+        if (!isChasingPlayer)
+        {
+            isChasingPlayer = true;
+            followTimeout = 0;
+            GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
+            GameHandler.instance.OnMusicBoxRewinded += musicBoxWinded;
+            GameHandler.instance.OnPlayerStep += updatePlayerPos;
+        }
     }
 }
