@@ -23,12 +23,9 @@ GameObject:
   - 23: {fileID: 23000011224845786}
   - 33: {fileID: 33000012295492672}
   - 195: {fileID: 195000012325741724}
-  - 136: {fileID: 136000010202465070}
   - 54: {fileID: 54000013454108310}
   - 135: {fileID: 135000012174646146}
   - 114: {fileID: 114000011084307396}
-  - 135: {fileID: 135000011623998418}
-  - 114: {fileID: 114000012444038380}
   m_Layer: 0
   m_Name: FollowGhost
   m_TagString: Untagged
@@ -55,7 +52,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012206242706}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -111,17 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c717652af01074c89f3014c292d023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000012444038380
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012206242706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c717652af01074c89f3014c292d023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000013910945258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,25 +121,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTar: {fileID: 0}
   stepThold: 0.6
-  idleTimer: 0.5
+  idleTimer: 2
   sprintSpeed: 3.5
   walkSpeed: 1
   followSpeed: 3.5
   chaseStepsThreshold: 20
   chaseStepsDecayTime: 1.88
   feetDistance: 0.4
---- !u!135 &135000011623998418
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012206242706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135000012174646146
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -165,19 +139,6 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136000010202465070
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012206242706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195000012325741724
 NavMeshAgent:
