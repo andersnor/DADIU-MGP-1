@@ -1,15 +1,19 @@
 fileFormatVersion: 2
-guid: 70a9e083f2d6fe747add6a1a9ec63cba
-timeCreated: 1473690626
+guid: 78bef72526ef2004bb8471fa0218bb8b
+timeCreated: 1473753817
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube1
+    100000: tombStone_geo
+    100002: tombStone_geo_grp
+    100004: //RootNode
+    400000: tombStone_geo
+    400002: tombStone_geo_grp
+    400004: //RootNode
+    2300000: tombStone_geo
+    3300000: tombStone_geo
+    4300000: tombStone_geo
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -35,7 +39,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.015
+    globalScale: 0.035
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
