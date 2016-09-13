@@ -53,6 +53,7 @@ public class RandomMusicSpawn : MonoBehaviour {
                 else
                 {
                     transform.position = firstSpawn[Random.Range(0, firstSpawn.Length)].transform.position;
+                    // first spawn is now done
                     firstSpawnDone = true;
                 }
 
