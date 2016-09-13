@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
+using System.Collections.Generic;
 
 [CustomEditor(typeof(BezierCurve))]
 public class BezierCurveEditor : Editor 

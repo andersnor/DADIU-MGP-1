@@ -10,7 +10,7 @@ public class GameHandler{
     public GameObject snake;
     public GameObject musicBox;
 
-    public Highscore highscore;
+    public Highscore highscore = new Highscore();
 
     public delegate void MusicBoxRewind();
     public event MusicBoxRewind OnMusicBoxRewind;
@@ -45,10 +45,9 @@ public class GameHandler{
         SceneManager.LoadScene(sceneNr);
     }
 
-    public void reset()
+    public static void Clear()
     {
         current = null;
-        SceneManager.LoadScene(0);
     }
 
     public void TriggerMusicBoxRewind()
@@ -101,11 +100,5 @@ public class GameHandler{
                 SceneManager.LoadScene("EndSceneGhost");
                 break;
         }
-    }
-
-
-    public void StartTime()
-    {
-        highscore = new Highscore();
     }
 }

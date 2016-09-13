@@ -15,11 +15,15 @@ public class GhostMovement : MonoBehaviour {
     float walkSpeed;
     [SerializeField]
     float followSpeed;
+    [SerializeField]
+    float chaseStepsThreshold, chaseStepsDecayTime;
     [Header("Distance between ghost feet (m):")]
     [SerializeField]
     float feetDistance;
     float printOffset, surfDist;
     private bool isSprinting = false, isChasingPlayer = false;
+
+    private float chaseSteps = 0, chaseStepsTimestamp = 0;
 
     Vector3 prevPos;
     GhostPrintPool printPool;
@@ -48,6 +52,14 @@ public class GhostMovement : MonoBehaviour {
 	void Update () {
         dist += (prevPos - transform.position).magnitude;
         prevPos = transform.position;
+
+        if (Time.time > chaseStepsTimestamp + chaseStepsDecayTime)
+        {
+            if (chaseSteps > 0)
+                chaseSteps--;
+            chaseStepsTimestamp = Time.time;
+        }
+
         if (dist > stepThold)
         {
             spawnStep();
@@ -103,9 +115,16 @@ public class GhostMovement : MonoBehaviour {
     }
     void updatePlayerPos()
     {
-        followTimeout = 0;
-        agent.speed = followSpeed;
-        agent.destination = followTar.position;
+        if (chaseSteps < chaseStepsThreshold)
+            chaseSteps++;
+        if (chaseSteps >= chaseStepsThreshold)
+        {
+            followTimeout = 0;
+            agent.speed = followSpeed;
+            print("Chasing player");
+            agent.destination = followTar.position;
+        }
+        //Debug.Log(chaseSteps + ", " + chaseStepsThreshold);
     }
 
     void OnDestroy()
@@ -117,6 +136,7 @@ public class GhostMovement : MonoBehaviour {
 
     public void ChasePlayer()
     {
+        Debug.Log("Chasing Player");
         if (!isChasingPlayer)
         {
             isChasingPlayer = true;

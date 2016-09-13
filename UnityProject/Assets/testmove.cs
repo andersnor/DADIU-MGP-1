@@ -29,7 +29,7 @@ public class testmove : MonoBehaviour {
             TrueChild = FindTrueChild(transform);
         else
             TrueChild = transform;
-        bezCurve = GameObject.Find("BezierCurve").GetComponent<BezierCurve>();
+        bezCurve = GameObject.Find("BezierCurve (1)").GetComponent<BezierCurve>();
         print(bezCurve.pointCount);
         distanceFromBack = Vector3.Distance(transform.position, TrueChild.position);
         //step = transform.parent.GetComponent<testmove>().step;
