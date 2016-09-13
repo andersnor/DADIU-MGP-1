@@ -102,10 +102,4 @@ public class GameHandler{
                 break;
         }
     }
-
-
-    public void StartTime()
-    {
-        highscore = new Highscore();
-    }
 }

@@ -33,7 +33,7 @@ public class RandomMusicSpawn : MonoBehaviour {
     {
         if(col.tag == "Player")
         {
-            if (Visible())
+            if (Visible() && timestamp != Time.time)
             {
                 timestamp = Time.time;
 
@@ -46,9 +46,9 @@ public class RandomMusicSpawn : MonoBehaviour {
                     SpawnRandomOutRange();
                 }
 
-                spawnRange += rangeIncrease;
-                GameHandler.instance.highscore.IncrementScore();
                 GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
+                GameHandler.instance.highscore.IncrementScore();
+                spawnRange += rangeIncrease;
                 //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
             }
         }
