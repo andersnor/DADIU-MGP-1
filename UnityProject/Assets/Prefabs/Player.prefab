@@ -22,7 +22,7 @@ GameObject:
   - 20: {fileID: 20000012387018366}
   - 92: {fileID: 92000011749184024}
   - 124: {fileID: 124000010362865236}
-  - 114: {fileID: 114000012532234680}
+  - 114: {fileID: 114000011555316298}
   - 114: {fileID: 114000014116774410}
   - 114: {fileID: 114000012280707930}
   m_Layer: 0
@@ -261,6 +261,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+--- !u!114 &114000011555316298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012447537746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012280707930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -293,17 +304,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   useCurveForZoom: 1
---- !u!114 &114000012532234680
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012447537746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000013173728894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb10561d441fc54429e419ee529d347a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  feetDistance: 0.25
+  feetDistance: 1
 --- !u!114 &114000014116774410
 MonoBehaviour:
   m_ObjectHideFlags: 1
