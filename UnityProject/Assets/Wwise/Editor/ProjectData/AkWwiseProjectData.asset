@@ -16,9 +16,19 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CF5F4A71-9F0C-4006-A3D8-C505900F160C}'
-    m_lastTimePsrt1: 134510254
-    m_lastTimePart2: -1999381802
+    m_lastTimePsrt1: -2026416778
+    m_lastTimePart2: -1999381499
     List:
+    - Name: Ambiance
+      Path: Default Work Unit\Ambiance
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambiance
+        ObjectType: 3
+      ID: -1313589867
+      Guid: 8c0faf90e22ecf419a59f166cbb8e591
+      maxAttenuation: 0
     - Name: Footsteps_Enemy
       Path: Default Work Unit\Footsteps_Enemy
       PathAndIcons:
@@ -28,7 +38,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 550365015
       Guid: e9b7de2bd9a6aa4dadb929269b5ac663
-      maxAttenuation: 0
+      maxAttenuation: 95
     - Name: Footsteps_Player
       Path: Default Work Unit\Footsteps_Player
       PathAndIcons:
@@ -39,6 +49,36 @@ MonoBehaviour:
       ID: 196357682
       Guid: b777aa7471c56f448ddfcddef9f70105
       maxAttenuation: 0
+    - Name: Ghost_Attack
+      Path: Default Work Unit\Ghost_Attack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ghost_Attack
+        ObjectType: 3
+      ID: 979070061
+      Guid: 9df9d0a7923c554b99dc3e2b07ca2915
+      maxAttenuation: 95
+    - Name: MenuButton
+      Path: Default Work Unit\MenuButton
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MenuButton
+        ObjectType: 3
+      ID: -2102570100
+      Guid: 1973041086774d449b7264c3db26f218
+      maxAttenuation: 0
+    - Name: MusicBox_Pause
+      Path: Default Work Unit\MusicBox_Pause
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicBox_Pause
+        ObjectType: 3
+      ID: -1992758682
+      Guid: f65207f546244842b51aec5b392280a7
+      maxAttenuation: 0
     - Name: MusicBox_Play
       Path: Default Work Unit\MusicBox_Play
       PathAndIcons:
@@ -48,6 +88,16 @@ MonoBehaviour:
         ObjectType: 3
       ID: 2089708342
       Guid: e11e2c2a9f5be84bb822e092ee8f6776
+      maxAttenuation: 150
+    - Name: MusicBox_Resume
+      Path: Default Work Unit\MusicBox_Resume
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicBox_Resume
+        ObjectType: 3
+      ID: -575841631
+      Guid: 19ee7340cbd4e647a11a78a788f702ef
       maxAttenuation: 0
     - Name: MusicBox_Stop
       Path: Default Work Unit\MusicBox_Stop
@@ -69,44 +119,135 @@ MonoBehaviour:
       ID: -743992543
       Guid: c18c840afc61f44f8be1952265d090d9
       maxAttenuation: 0
+    - Name: MusicBox_Windup_Stop
+      Path: Default Work Unit\MusicBox_Windup_Stop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicBox_Windup_Stop
+        ObjectType: 3
+      ID: -1229309916
+      Guid: aa57f44167397a45aa3a0ceeba7dd562
+      maxAttenuation: 0
+    - Name: Snake_Appear
+      Path: Default Work Unit\Snake_Appear
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Snake_Appear
+        ObjectType: 3
+      ID: -365250703
+      Guid: 4aeb4764e2273341a2c0a7ceef99c1a7
+      maxAttenuation: 40
+    - Name: Snake_Disappear
+      Path: Default Work Unit\Snake_Disappear
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Snake_Disappear
+        ObjectType: 3
+      ID: -1971426171
+      Guid: 719351f054ce5340b7f013aebb51d0b8
+      maxAttenuation: 40
+    - Name: Snake_Move
+      Path: Default Work Unit\Snake_Move
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Snake_Move
+        ObjectType: 3
+      ID: -2101350519
+      Guid: 50fa601148615a458b12d16be37abad0
+      maxAttenuation: 40
+    - Name: Snake_Move_Stop
+      Path: Default Work Unit\Snake_Move_Stop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Snake_Move_Stop
+        ObjectType: 3
+      ID: 780708924
+      Guid: d6a854be97af9f48ba3cdf4a5d4f4241
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}'
-    m_lastTimePsrt1: 2134341584
-    m_lastTimePart2: -1999382396
-    List: []
+    m_lastTimePsrt1: -1011101550
+    m_lastTimePart2: -1999381540
+    List:
+    - Name: env_forest
+      Path: Default Work Unit\Master Audio Bus\Environmental\env_forest
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Environmental
+        ObjectType: 2
+      - ElementName: env_forest
+        ObjectType: 1
+      ID: 1058811110
+      Guid: a2f553211e5e8b4796030f98bcd2e8b8
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{5F6B6170-6ABC-420D-8118-1B94B3A46F6B}'
-    m_lastTimePsrt1: 2140401931
-    m_lastTimePart2: -1999382396
-    List: []
+    m_lastTimePsrt1: 456748386
+    m_lastTimePart2: -1999381693
+    List:
+    - Name: Menu
+      Path: Default Work Unit\Menu
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 9
+      ID: -1687411216
+      Guid: 930302f3bf5fa04db8d5219fd9f9fa98
+      values:
+      - In_Game
+      - In_Menu
+      - None
+      ValueIcons:
+      - ElementName: In_Game
+        ObjectType: 8
+      - ElementName: In_Menu
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: 892ae1b092273f61db3ba32c
+      ValueGuids:
+      - bytes: caffd872a2bbe44f943b6ca100d88a40
+      - bytes: a0392977d30bde4699d8e8685e614bc2
+      - bytes: ac27526c6582f1488d7a37190e0d8c9f
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{39DC731D-19C4-43EF-817C-731414E9FD9C}'
-    m_lastTimePsrt1: 2140411931
-    m_lastTimePart2: -1999382396
+    m_lastTimePsrt1: 958469411
+    m_lastTimePart2: -1999382556
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A4AC25EF-E508-4944-ADCD-3BB956A85491}'
-    m_lastTimePsrt1: 154041371
-    m_lastTimePart2: -1999381802
+    m_lastTimePsrt1: -1889428942
+    m_lastTimePart2: -1999381499
     List:
-    - Name: Main_01
-      Path: Default Work Unit\Main_01
+    - Name: Main
+      Path: Default Work Unit\Main
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Main_01
+      - ElementName: Main
         ObjectType: 7
-      ID: -760297672
-      Guid: 23579918438f6a4a90238a271cb8d6ff
-  ExpandedItems: []
+      ID: -1133058374
+      Guid: f327167d3c75754d8191b275f1303cb3
+  ExpandedItems:
+  - /Team 2 - MGP-1
+  - /Team 2 - MGP-1/Events
+  - /Team 2 - MGP-1/Events/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

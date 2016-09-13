@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class RandomMusicSpawn : MonoBehaviour {
-    
+
+    public float musicboxRewindTime = 3.5f;
+    public float tempTime;
     public float spawnRange;
     public float minSpawnRange;
     float pointRange;
@@ -11,67 +13,108 @@ public class RandomMusicSpawn : MonoBehaviour {
     public float rangeIncrease;
     public bool debug;
     string musicSpawnTag = "MusicSpawn";
-    public int spawnInside;
+    public int spawnInside = 0;
     public GameObject[] firstSpawn;
     private bool firstSpawnDone;
 
     public int playTime = 60;
+    [SerializeField]
     private float timestamp;
+
+    bool isPlayingSound = false;
 
     // Use this for initialization
     void Start () {
-        timestamp = Time.time;
+        timestamp = 0;
         firstSpawnDone = false;
     }
 
     // Update is called once per frame
     void Update () {
-        if (timestamp + playTime < Time.time)
+        if (timestamp > playTime)
         {
             GameHandler.instance.TriggerMusicBoxTimeout();
         }
+        else
+            timestamp += Time.deltaTime;
     }
 
     void OnTriggerStay(Collider col)
     {
         if(col.tag == "Player")
         {
-            if (Visible() && timestamp != Time.time)
+            if (Visible() && tempTime <= musicboxRewindTime)
             {
-                timestamp = Time.time;
+                tempTime += Time.deltaTime;
+                if(!isPlayingSound)
+                {
+                    //Stop musicbox sound
+                    GameHandler.instance.TriggerSoundMusicBoxPause();
+                    //Start rewind sound
+                    GameHandler.instance.TriggerSoundMusicBoxRewind();
+                    isPlayingSound = true;
+                }
+
+            }
+            if(tempTime > musicboxRewindTime)
+            {
+                GameHandler.instance.highscore.IncrementScore();
+                print(GameHandler.instance.highscore.GetScore());
+                spawnRange += rangeIncrease;
+                tempTime = 0;
+                isPlayingSound = false;
+                GameHandler.instance.TriggerSoundMusicBoxPlay();
+                timestamp = 0;
+                //Stop rewind sound
+                GameHandler.instance.TriggerSoundMusicBoxRewindStop();
+                //GameHandler.instance.TriggerSoundMusicBoxPause();
                 if (firstSpawnDone)
                 {
-                    if (spawnInside-- > 0)
+                    /*if (spawnInside-- > 0)
                     {
+                        print("In range");
                         spawnRandomInRange();
-                    }
-                    else
-                    {
-                        SpawnRandomOutRange();
-                    }
+                    }*/
+                    //else
+                    //{
+                        print("out range");
+                        spawnRandomOutRange();
+                    //}
                 }
                 else
                 {
                     transform.position = firstSpawn[Random.Range(0, firstSpawn.Length)].transform.position;
                     // first spawn is now done
                     firstSpawnDone = true;
-                }
+                    GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
 
-                GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
-                GameHandler.instance.highscore.IncrementScore();
-                spawnRange += rangeIncrease;
-                //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
+                    //Start music box sound again
+                   
+                    
+                } 
             }
+        }
+    }
+    void OnTriggerExit(Collider col)
+    {
+     
+        if (col.tag == "Player")
+        {
+            print("Plz");
+            GameHandler.instance.TriggerSoundMusicBoxRewindStop();
+            GameHandler.instance.TriggerSoundMusicBoxResume();
+            isPlayingSound = false;
         }
     }
 
     private bool Visible()
     {
-        return gameObject.GetComponent<Renderer>().isVisible;
+        return gameObject.GetComponentInChildren<Renderer>().isVisible;
     }
 
     public void spawnRandomInRange()
     {
+
         spawnRange -= rangeIncrease;
         GameObject[] allPoints = GameObject.FindGameObjectsWithTag(musicSpawnTag);
         List<GameObject> insideRange = sortOutTooClose(getMusicSpawns(Physics.OverlapSphere(player.transform.position, spawnRange)));
@@ -97,7 +140,7 @@ public class RandomMusicSpawn : MonoBehaviour {
         }
     }
 
-    public void SpawnRandomOutRange()
+    public void spawnRandomOutRange()
     {
         GameObject[] allPoints = GameObject.FindGameObjectsWithTag(musicSpawnTag);
         List<GameObject> inRange = getMusicSpawns(Physics.OverlapSphere(player.transform.position, spawnRange));

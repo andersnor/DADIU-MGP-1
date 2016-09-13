@@ -106,7 +106,7 @@ public class BezierSnakeHead : MonoBehaviour {
     void moveBezierPoint()
     {
         step += speed * Time.deltaTime;
-        if (step >= 1)
+        if (step >= 0.98)
             step = 0;
         transform.position = curCurve.GetPointAt(step);
         transform.rotation = Quaternion.LookRotation(curCurve.GetPointAt(step + (speed * Time.deltaTime)) - transform.position) * origRot;

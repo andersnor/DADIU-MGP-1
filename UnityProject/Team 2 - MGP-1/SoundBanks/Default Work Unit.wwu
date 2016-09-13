@@ -3,10 +3,20 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{A4AC25EF-E508-4944-ADCD-3BB956A85491}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="Main_01" ID="{18995723-8F43-4A6A-9023-8A271CB8D6FF}">
+				<SoundBank Name="Main" ID="{7D1627F3-753C-4D75-8191-B275F1303CB3}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Snake_Disappear" ID="{F0519371-CE54-4053-B7F0-13AEBB51D0B8}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Snake_Appear" ID="{6447EB4A-27E2-4133-A2C0-A7CEEF99C1A7}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ambiance" ID="{90AF0F8C-2EE2-41CF-9A59-F166CBB8E591}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MusicBox_Pause" ID="{F50752F6-2446-4248-B51A-EC5B392280A7}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Stop" ID="{E0DD3D61-FE66-42CD-A293-225FE9CCFEEC}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MenuButton" ID="{10047319-7786-444D-9B72-64C3DB26F218}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Footsteps_Player" ID="{74AA77B7-C571-446F-8DDF-CDDEF9F70105}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Snake_Move" ID="{1160FA50-6148-455A-8B12-D16BE37ABAD0}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MusicBox_Windup_Stop" ID="{41F457AA-3967-457A-AA3A-0CEEBA7DD562}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MusicBox_Resume" ID="{4073EE19-D4CB-47E6-A11A-78A788F702EF}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Snake_Move_Stop" ID="{BE54A8D6-AF97-489F-BA3C-DF4A5D4F4241}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ghost_Attack" ID="{A7D0F99D-3C92-4B55-99DC-3E2B07CA2915}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Play" ID="{2A2C1EE1-5B9F-4BE8-B822-E092EE8F6776}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Footsteps_Enemy" ID="{2BDEB7E9-A6D9-4DAA-ADB9-29269B5AC663}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Windup" ID="{0A848CC1-61FC-4FF4-8BE1-952265D090D9}" WorkUnitID="{CF5F4A71-9F0C-4006-A3D8-C505900F160C}" Filter="7" Origin="Manual"/>

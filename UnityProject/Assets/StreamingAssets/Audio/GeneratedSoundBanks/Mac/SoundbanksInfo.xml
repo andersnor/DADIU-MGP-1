@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="118">
+	<RootPaths>
+		<ProjectRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2981377429" Name="Ambiance" ObjectPath="\Events\Default Work Unit\Ambiance"/>
+				<Event Id="550365015" Name="Footsteps_Enemy" ObjectPath="\Events\Default Work Unit\Footsteps_Enemy" MaxAttenuation="95.000000"/>
+				<Event Id="196357682" Name="Footsteps_Player" ObjectPath="\Events\Default Work Unit\Footsteps_Player"/>
+				<Event Id="979070061" Name="Ghost_Attack" ObjectPath="\Events\Default Work Unit\Ghost_Attack" MaxAttenuation="95.000000"/>
+				<Event Id="2192397196" Name="MenuButton" ObjectPath="\Events\Default Work Unit\MenuButton"/>
+				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="95.000000"/>
+				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="3550974753" Name="MusicBox_Windup" ObjectPath="\Events\Default Work Unit\MusicBox_Windup"/>
+				<Event Id="3929716593" Name="Snake_Appear" ObjectPath="\Events\Default Work Unit\Snake_Appear" MaxAttenuation="40.000000"/>
+				<Event Id="2323541125" Name="Snake_Disappear" ObjectPath="\Events\Default Work Unit\Snake_Disappear" MaxAttenuation="40.000000"/>
+				<Event Id="2193616777" Name="Snake_Move" ObjectPath="\Events\Default Work Unit\Snake_Move" MaxAttenuation="40.000000"/>
+				<Event Id="780708924" Name="Snake_Move_Stop" ObjectPath="\Events\Default Work Unit\Snake_Move_Stop" MaxAttenuation="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="197800" Language="SFX">
+					<ShortName>Howl_7.wav</ShortName>
+					<Path>SFX\Howl_7_9E69E797.wem</Path>
+				</File>
+				<File Id="43697082" Language="SFX">
+					<ShortName>Ghost Attack.wav</ShortName>
+					<Path>SFX\Ghost Attack_9E69E797.wem</Path>
+				</File>
+				<File Id="64539119" Language="SFX">
+					<ShortName>Wind.wav</ShortName>
+					<Path>SFX\Wind_9E69E797.wem</Path>
+				</File>
+				<File Id="87900637" Language="SFX">
+					<ShortName>Howl_8.wav</ShortName>
+					<Path>SFX\Howl_8_9E69E797.wem</Path>
+				</File>
+				<File Id="87929646" Language="SFX">
+					<ShortName>Footsteps_4.wav</ShortName>
+					<Path>SFX\Footsteps_4_9E69E797.wem</Path>
+				</File>
+				<File Id="105985574" Language="SFX">
+					<ShortName>Music Box Melody.wav</ShortName>
+					<Path>SFX\Music Box Melody_9E69E797.wem</Path>
+				</File>
+				<File Id="113435458" Language="SFX">
+					<ShortName>Snake Hiss_1.wav</ShortName>
+					<Path>SFX\Snake Hiss_1_9E69E797.wem</Path>
+				</File>
+				<File Id="132415659" Language="SFX">
+					<ShortName>Howl_5.wav</ShortName>
+					<Path>SFX\Howl_5_9E69E797.wem</Path>
+				</File>
+				<File Id="154178139" Language="SFX">
+					<ShortName>Wind_5.wav</ShortName>
+					<Path>SFX\Wind_5_9E69E797.wem</Path>
+				</File>
+				<File Id="168978832" Language="SFX">
+					<ShortName>Wind_1.wav</ShortName>
+					<Path>SFX\Wind_1_9E69E797.wem</Path>
+				</File>
+				<File Id="245415407" Language="SFX">
+					<ShortName>Footsteps_2.wav</ShortName>
+					<Path>SFX\Footsteps_2_9E69E797.wem</Path>
+				</File>
+				<File Id="261497381" Language="SFX">
+					<ShortName>Menu Button.wav</ShortName>
+					<Path>SFX\Menu Button_9E69E797.wem</Path>
+				</File>
+				<File Id="297157849" Language="SFX">
+					<ShortName>Windup.wav</ShortName>
+					<Path>SFX\Windup_9E69E797.wem</Path>
+				</File>
+				<File Id="300360605" Language="SFX">
+					<ShortName>Wind_3.wav</ShortName>
+					<Path>SFX\Wind_3_9E69E797.wem</Path>
+				</File>
+				<File Id="317669979" Language="SFX">
+					<ShortName>Snake Hiss_7.wav</ShortName>
+					<Path>SFX\Snake Hiss_7_9E69E797.wem</Path>
+				</File>
+				<File Id="361954503" Language="SFX">
+					<ShortName>Howl.wav</ShortName>
+					<Path>SFX\Howl_9E69E797.wem</Path>
+				</File>
+				<File Id="399234406" Language="SFX">
+					<ShortName>Snake Move_5.wav</ShortName>
+					<Path>SFX\Snake Move_5_9E69E797.wem</Path>
+				</File>
+				<File Id="445005326" Language="SFX">
+					<ShortName>Snake Move_2.wav</ShortName>
+					<Path>SFX\Snake Move_2_9E69E797.wem</Path>
+				</File>
+				<File Id="469106502" Language="SFX">
+					<ShortName>Footsteps_1.wav</ShortName>
+					<Path>SFX\Footsteps_1_9E69E797.wem</Path>
+				</File>
+				<File Id="472583299" Language="SFX">
+					<ShortName>Snake Move_3.wav</ShortName>
+					<Path>SFX\Snake Move_3_9E69E797.wem</Path>
+				</File>
+				<File Id="473442430" Language="SFX">
+					<ShortName>Howl_2.wav</ShortName>
+					<Path>SFX\Howl_2_9E69E797.wem</Path>
+				</File>
+				<File Id="479348030" Language="SFX">
+					<ShortName>Howl_3.wav</ShortName>
+					<Path>SFX\Howl_3_9E69E797.wem</Path>
+				</File>
+				<File Id="515091371" Language="SFX">
+					<ShortName>Snake Move_1.wav</ShortName>
+					<Path>SFX\Snake Move_1_9E69E797.wem</Path>
+				</File>
+				<File Id="555888398" Language="SFX">
+					<ShortName>Snake Disappear.wav</ShortName>
+					<Path>SFX\Snake Disappear_9E69E797.wem</Path>
+				</File>
+				<File Id="634218394" Language="SFX">
+					<ShortName>Snake Hiss_6.wav</ShortName>
+					<Path>SFX\Snake Hiss_6_9E69E797.wem</Path>
+				</File>
+				<File Id="640131029" Language="SFX">
+					<ShortName>Wind_2.wav</ShortName>
+					<Path>SFX\Wind_2_9E69E797.wem</Path>
+				</File>
+				<File Id="682406377" Language="SFX">
+					<ShortName>Footsteps_6.wav</ShortName>
+					<Path>SFX\Footsteps_6_9E69E797.wem</Path>
+				</File>
+				<File Id="709901688" Language="SFX">
+					<ShortName>Snake Move.wav</ShortName>
+					<Path>SFX\Snake Move_9E69E797.wem</Path>
+				</File>
+				<File Id="727005990" Language="SFX">
+					<ShortName>Snake Hiss_3.wav</ShortName>
+					<Path>SFX\Snake Hiss_3_9E69E797.wem</Path>
+				</File>
+				<File Id="731114191" Language="SFX">
+					<ShortName>Footsteps_3.wav</ShortName>
+					<Path>SFX\Footsteps_3_9E69E797.wem</Path>
+				</File>
+				<File Id="737559129" Language="SFX">
+					<ShortName>Snake Move_4.wav</ShortName>
+					<Path>SFX\Snake Move_4_9E69E797.wem</Path>
+				</File>
+				<File Id="757042822" Language="SFX">
+					<ShortName>Howl_4.wav</ShortName>
+					<Path>SFX\Howl_4_9E69E797.wem</Path>
+				</File>
+				<File Id="762669817" Language="SFX">
+					<ShortName>Snake Hiss.wav</ShortName>
+					<Path>SFX\Snake Hiss_9E69E797.wem</Path>
+				</File>
+				<File Id="789060983" Language="SFX">
+					<ShortName>Wind_4.wav</ShortName>
+					<Path>SFX\Wind_4_9E69E797.wem</Path>
+				</File>
+				<File Id="792122977" Language="SFX">
+					<ShortName>Wind_7.wav</ShortName>
+					<Path>SFX\Wind_7_9E69E797.wem</Path>
+				</File>
+				<File Id="818279564" Language="SFX">
+					<ShortName>Footsteps_5.wav</ShortName>
+					<Path>SFX\Footsteps_5_9E69E797.wem</Path>
+				</File>
+				<File Id="820383750" Language="SFX">
+					<ShortName>Snake Hiss_2.wav</ShortName>
+					<Path>SFX\Snake Hiss_2_9E69E797.wem</Path>
+				</File>
+				<File Id="822767449" Language="SFX">
+					<ShortName>Wind_8.wav</ShortName>
+					<Path>SFX\Wind_8_9E69E797.wem</Path>
+				</File>
+				<File Id="840012647" Language="SFX">
+					<ShortName>Snake Appear.wav</ShortName>
+					<Path>SFX\Snake Appear_9E69E797.wem</Path>
+				</File>
+				<File Id="891389895" Language="SFX">
+					<ShortName>Howl_1.wav</ShortName>
+					<Path>SFX\Howl_1_9E69E797.wem</Path>
+				</File>
+				<File Id="943730900" Language="SFX">
+					<ShortName>Snake Hiss_5.wav</ShortName>
+					<Path>SFX\Snake Hiss_5_9E69E797.wem</Path>
+				</File>
+				<File Id="993143238" Language="SFX">
+					<ShortName>Wind_6.wav</ShortName>
+					<Path>SFX\Wind_6_9E69E797.wem</Path>
+				</File>
+				<File Id="993488737" Language="SFX">
+					<ShortName>Snake Hiss_4.wav</ShortName>
+					<Path>SFX\Snake Hiss_4_9E69E797.wem</Path>
+				</File>
+				<File Id="1022005065" Language="SFX">
+					<ShortName>Howl_6.wav</ShortName>
+					<Path>SFX\Howl_6_9E69E797.wem</Path>
+				</File>
+				<File Id="1047240800" Language="SFX">
+					<ShortName>Snake Move_6.wav</ShortName>
+					<Path>SFX\Snake Move_6_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
