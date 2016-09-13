@@ -12,7 +12,6 @@ public class Gyroscope : MonoBehaviour
     [SerializeField]
     float movementSpeed = 150.0f;
     [SerializeField]
-    float drag = 0.9f;
     private Vector3 currentOrientation;
 
     [Header("Distance between player-steps (m):")]
@@ -21,16 +20,31 @@ public class Gyroscope : MonoBehaviour
     float dist = 0;
     Vector3 prevPos;
 
+    private float initialYAngle = 0f;
+    private float appliedGyroYAngle = 0f;
+    private float calibrationYAngle = 0f;
+    InitCamMove initCamMove;
+
     void Start()
     {
+        GameHandler.instance.player = gameObject;
         rid = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
+        Application.targetFrameRate = 60;
+        initialYAngle = transform.eulerAngles.y;
+        initCamMove = playerCamera.GetComponent<InitCamMove>();
     }
 
+    void Update()
+    {
+        ApplyGyroRotation();
+        ApplyCalibration();
+    }
 
     void FixedUpdate()
     {
-        playerCamera.transform.Rotate(-Input.gyro.rotationRateUnbiased.x, -Input.gyro.rotationRateUnbiased.y, Input.gyro.rotationRateUnbiased.z);
+        if (initCamMove && initCamMove.enabled)
+            return;
         //Check for touch input and set movement to true
         if (Input.touchCount < 2)
         {
@@ -49,8 +63,7 @@ public class Gyroscope : MonoBehaviour
         }
         else if (Input.touchCount == 0)
         {
-            rid.velocity = rid.velocity * (1 - drag * Time.deltaTime);
-            //Debug.Log("notouch");
+            rid.velocity = Vector3.zero;
         }
 
         //Footsteps following the player
@@ -61,8 +74,23 @@ public class Gyroscope : MonoBehaviour
             dist = 0;
             GameHandler.instance.TriggerPlayerStep();
         }
-
+    }
+    public void CalibrateYAngle()
+    {
+        calibrationYAngle = appliedGyroYAngle - initialYAngle; // Offsets the y angle in case it wasn't 0 at edit time.
     }
 
+    void ApplyGyroRotation()
+    {
+        playerCamera.transform.rotation = Input.gyro.attitude;
+        playerCamera.transform.Rotate(0f, 0f, 180f, Space.Self); // Swap "handedness" of quaternion from gyro.
+        playerCamera.transform.Rotate(90f, 0f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
+        appliedGyroYAngle = transform.eulerAngles.y; // Save the angle around y axis for use in calibration.
+    }
+
+    void ApplyCalibration()
+    {
+        playerCamera.transform.Rotate(0f, -calibrationYAngle, 0f, Space.World); // Rotates y angle back however much it deviated when calibrationYAngle was saved.
+    }
 
 }
