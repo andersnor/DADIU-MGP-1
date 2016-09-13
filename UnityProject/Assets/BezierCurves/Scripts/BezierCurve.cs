@@ -15,29 +15,29 @@ using System.Collections.Generic;
 [ExecuteInEditMode]
 [Serializable]
 public class BezierCurve : MonoBehaviour {
-	
-	#region PublicVariables
-	
-	/// <summary>
-	///  	- the number of mid-points calculated for each pair of bezier points
-	///  	- used for drawing the curve in the editor
-	///  	- used for calculating the "length" variable
-	/// </summary>
-	public int resolution = 30;
-	
-	/// <summary>
-	/// Gets or sets a value indicating whether this <see cref="BezierCurve"/> is dirty.
-	/// </summary>
-	/// <value>
-	/// <c>true</c> if dirty; otherwise, <c>false</c>.
-	/// </value>
-	public bool dirty { get; private set; }
+    public int index;
+    #region PublicVariables
+    /// <summary>
+    ///  	- the number of mid-points calculated for each pair of bezier points
+    ///  	- used for drawing the curve in the editor
+    ///  	- used for calculating the "length" variable
+    /// </summary>
+    public int resolution = 30;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this <see cref="BezierCurve"/> is dirty.
+    /// </summary>
+    /// <value>
+    /// <c>true</c> if dirty; otherwise, <c>false</c>.
+    /// </value>
+    public bool dirty { get; private set; }
 	
 	/// <summary>
 	/// 	- color this curve will be drawn with in the editor
 	///		- set in the editor
 	/// </summary>
 	public Color drawColor = Color.white;
+
 	
 	#endregion
 	

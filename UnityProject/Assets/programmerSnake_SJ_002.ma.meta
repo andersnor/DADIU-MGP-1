@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: f66e5ef7baee2314592dd8c172970914
+timeCreated: 1473664132
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: head_base_jnt
+    100002: head_end_jnt
+    100004: head_jnt
+    100006: lowerMouth_base_jnt
+    100008: lowerMouth_end_jnt
+    100010: neck_base_jnt
+    100012: neck_mid_jnt
+    100014: neck_top_jnt
+    100016: //RootNode
+    100018: root_jnt
+    100020: snake_geo
+    100022: snake_geo_grp
+    100024: snake_jnt_grp
+    100026: tail_base_jnt
+    100028: tail_spine_jnt_001
+    100030: tail_spine_jnt_002
+    100032: tail_spine_jnt_003
+    100034: tail_spine_jnt_004
+    100036: tail_spine_jnt_005
+    100038: tail_spine_jnt_006
+    100040: tail_spine_jnt_007
+    100042: tail_spine_jnt_008
+    100044: tail_spine_jnt_009
+    100046: tail_spine_jnt_010
+    100048: tail_spine_jnt_011
+    100050: tail_spine_jnt_012
+    100052: tail_spine_jnt_013
+    100054: tail_spine_jnt_014
+    100056: tail_spine_jnt_015
+    100058: tail_spine_jnt_016
+    100060: tail_spine_jnt_017
+    100062: tail_spine_jnt_018
+    100064: tail_spine_jnt_019
+    100066: taill_end_jnt
+    100068: upperMouth_base_jnt
+    100070: upperMouth_end_jnt
+    400000: head_base_jnt
+    400002: head_end_jnt
+    400004: head_jnt
+    400006: lowerMouth_base_jnt
+    400008: lowerMouth_end_jnt
+    400010: neck_base_jnt
+    400012: neck_mid_jnt
+    400014: neck_top_jnt
+    400016: //RootNode
+    400018: root_jnt
+    400020: snake_geo
+    400022: snake_geo_grp
+    400024: snake_jnt_grp
+    400026: tail_base_jnt
+    400028: tail_spine_jnt_001
+    400030: tail_spine_jnt_002
+    400032: tail_spine_jnt_003
+    400034: tail_spine_jnt_004
+    400036: tail_spine_jnt_005
+    400038: tail_spine_jnt_006
+    400040: tail_spine_jnt_007
+    400042: tail_spine_jnt_008
+    400044: tail_spine_jnt_009
+    400046: tail_spine_jnt_010
+    400048: tail_spine_jnt_011
+    400050: tail_spine_jnt_012
+    400052: tail_spine_jnt_013
+    400054: tail_spine_jnt_014
+    400056: tail_spine_jnt_015
+    400058: tail_spine_jnt_016
+    400060: tail_spine_jnt_017
+    400062: tail_spine_jnt_018
+    400064: tail_spine_jnt_019
+    400066: taill_end_jnt
+    400068: upperMouth_base_jnt
+    400070: upperMouth_end_jnt
+    4300000: snake_geo
+    9500000: //RootNode
+    13700000: snake_geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
