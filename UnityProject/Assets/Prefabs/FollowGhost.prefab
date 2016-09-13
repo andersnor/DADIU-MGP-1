@@ -25,12 +25,14 @@ GameObject:
   - 195: {fileID: 195000012325741724}
   - 136: {fileID: 136000010202465070}
   - 54: {fileID: 54000013454108310}
+  - 135: {fileID: 135000012174646146}
+  - 114: {fileID: 114000011084307396}
   m_Layer: 0
   m_Name: FollowGhost
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4000012400237022
 Transform:
@@ -39,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012206242706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: 0}
+  m_LocalPosition: {x: 135.7, y: 1.1, z: 119.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -96,6 +98,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114000011084307396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012206242706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c717652af01074c89f3014c292d023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013910945258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,12 +121,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTar: {fileID: 0}
-  stepThold: 5
-  idleTimer: 5
-  sprintSpeed: 4.5
+  stepThold: 0.6
+  idleTimer: 0.25
+  sprintSpeed: 3.5
   walkSpeed: 2
   followSpeed: 3.5
-  printOffSet: 0
+  chaseStepsThreshold: 20
+  chaseStepsDecayTime: 1.54
+  feetDistance: 0.4
+--- !u!135 &135000012174646146
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012206242706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136000010202465070
 CapsuleCollider:
   m_ObjectHideFlags: 1

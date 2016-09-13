@@ -123,7 +123,7 @@ public class GhostMovement : MonoBehaviour {
             agent.speed = followSpeed;
             agent.destination = followTar.position;
         }
-        Debug.Log(chaseSteps + ", " + chaseStepsThreshold);
+        //Debug.Log(chaseSteps + ", " + chaseStepsThreshold);
     }
 
     void OnDestroy()
@@ -135,9 +135,9 @@ public class GhostMovement : MonoBehaviour {
 
     public void ChasePlayer()
     {
+        Debug.Log("Chasing Player");
         if (!isChasingPlayer)
         {
-            Debug.Log("Chasing Player");
             isChasingPlayer = true;
             followTimeout = 0;
             GameHandler.instance.OnMusicBoxRewind += musicBoxWind;
