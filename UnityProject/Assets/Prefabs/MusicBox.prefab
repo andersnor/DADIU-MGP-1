@@ -24,7 +24,7 @@ GameObject:
   - 23: {fileID: 23000010311319488}
   - 114: {fileID: 114000012460243986}
   - 54: {fileID: 54000014032701322}
-  - 82: {fileID: 82000012361028150}
+  - 82: {fileID: 82000013730654858}
   m_Layer: 0
   m_Name: MusicBox
   m_TagString: Untagged
@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6029a9005f56ceb4d91944c219eb6a1e, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -108,7 +108,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 4.05, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &82000012361028150
+--- !u!82 &82000013730654858
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -234,4 +234,7 @@ MonoBehaviour:
   rangeIncrease: 5
   debug: 0
   spawnInside: 0
+  firstSpawn:
+  - {fileID: 0}
+  - {fileID: 0}
   playTime: 60

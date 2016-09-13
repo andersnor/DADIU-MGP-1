@@ -10,5 +10,7 @@ public class callScenes : MonoBehaviour {
         Debug.Log("Loading scene " + sceneName);
         SceneManager.LoadScene(sceneName);
 
+        if (sceneName == "StartScene")
+            GameHandler.Clear();
     }
 }
