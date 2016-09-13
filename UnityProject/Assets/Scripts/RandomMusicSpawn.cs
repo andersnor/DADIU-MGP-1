@@ -12,6 +12,8 @@ public class RandomMusicSpawn : MonoBehaviour {
     public bool debug;
     string musicSpawnTag = "MusicSpawn";
     public int spawnInside;
+    public GameObject[] firstSpawn;
+    private bool firstSpawnDone;
 
     public int playTime = 60;
     private float timestamp;
@@ -19,6 +21,7 @@ public class RandomMusicSpawn : MonoBehaviour {
     // Use this for initialization
     void Start () {
         timestamp = Time.time;
+        firstSpawnDone = false;
     }
 
     // Update is called once per frame
@@ -33,22 +36,29 @@ public class RandomMusicSpawn : MonoBehaviour {
     {
         if(col.tag == "Player")
         {
-            if (Visible())
+            if (Visible() && timestamp != Time.time)
             {
                 timestamp = Time.time;
-
-                if (spawnInside-- > 0)
+                if (firstSpawnDone)
                 {
-                    spawnRandomInRange();
+                    if (spawnInside-- > 0)
+                    {
+                        spawnRandomInRange();
+                    }
+                    else
+                    {
+                        SpawnRandomOutRange();
+                    }
                 }
                 else
                 {
-                    GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
-                    SpawnRandomOutRange();
+                    transform.position = firstSpawn[Random.Range(0, firstSpawn.Length)].transform.position;
+                    firstSpawnDone = true;
                 }
 
-                spawnRange += rangeIncrease;
+                GameHandler.instance.ghost.GetComponent<GhostMovement>().ChasePlayer();
                 GameHandler.instance.highscore.IncrementScore();
+                spawnRange += rangeIncrease;
                 //player.GetComponentInChildren<SphereCollider>().radius = spawnRange;
             }
         }
