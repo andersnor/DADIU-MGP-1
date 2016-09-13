@@ -69,6 +69,7 @@ public class GhostMovement : MonoBehaviour {
         followTimeout += 1 * Time.deltaTime;
         if (followTimeout > idleTimer && !isSprinting)
         {
+            print("Random pos move");
             agent.destination = randTar[Random.Range(0, randTar.Length)].position;
             agent.speed = walkSpeed;
             followTimeout = 0;
