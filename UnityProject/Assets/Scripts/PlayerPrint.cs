@@ -11,7 +11,7 @@ public class PlayerPrint : MonoBehaviour {
     Collider surface;
 
     void Start () {
-        surfDist = 0 - transform.position.y * 2 + 0.005f;
+        surfDist = 0 - transform.GetChild(0).position.y * 2 + 0.005f;//
         surface = GameObject.Find("Terrain").GetComponent<Collider>();
         printPool = GameObject.Find("_SCRIPTS").GetComponent<PlayerPrintPool>();
         printOffset = feetDistance / 2;
@@ -28,7 +28,7 @@ public class PlayerPrint : MonoBehaviour {
             newPrint.tag = "spawned";
             printPool.registerPrint(newPrint);
         }
-        newPrint.transform.SetParent(transform);
+        newPrint.transform.SetParent(transform.GetChild(0));//
         if (foot)
             newPrint.transform.localPosition = new Vector3(-printOffset, 0, 0);
         else
@@ -36,7 +36,13 @@ public class PlayerPrint : MonoBehaviour {
             newPrint.transform.localPosition = new Vector3(printOffset, 0, 0);
             newPrint.GetComponent<Renderer>().material.mainTextureScale = new Vector2(-1f, 1);
         }
-        newPrint.transform.rotation = transform.rotation;
+        Vector3 tempRot = Vector3.zero;
+        tempRot.x = 0;
+        tempRot.z = 0;
+        tempRot.y = transform.GetChild(0).rotation.eulerAngles.y;
+        newPrint.transform.rotation = Quaternion.Euler(tempRot);
+        newPrint.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        //print(transform.GetChild(0).rotation.eulerAngles.y);
         newPrint.GetComponent<AudioSource>().Play();
         //newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO WWIVE SHIT
         newPrint.transform.SetParent(null);
