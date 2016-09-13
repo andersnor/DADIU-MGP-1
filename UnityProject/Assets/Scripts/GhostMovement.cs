@@ -121,6 +121,7 @@ public class GhostMovement : MonoBehaviour {
         {
             followTimeout = 0;
             agent.speed = followSpeed;
+            print("Chasing player");
             agent.destination = followTar.position;
         }
         //Debug.Log(chaseSteps + ", " + chaseStepsThreshold);
