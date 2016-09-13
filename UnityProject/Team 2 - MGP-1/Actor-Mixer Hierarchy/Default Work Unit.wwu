@@ -22,9 +22,10 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-20</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -33,7 +34,10 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+							<ObjectRef Name="SFX" ID="{C39E72EE-F921-4885-B637-C3E5181945D4}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -164,6 +168,23 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+								<State Name="Custom State" ID="{8FC5B713-C550-4549-A148-4B577E0A4BC7}" ShortID="430499046">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-80"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Footsteps Enemy" ID="{34E89693-CA22-4DD3-B4CA-1569F46FBD3A}" ShortID="468980224">
 					<PropertyList>
@@ -185,9 +206,10 @@
 							</ModifierList>
 						</Property>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-15</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -199,7 +221,10 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+							<ObjectRef Name="SFX" ID="{C39E72EE-F921-4885-B637-C3E5181945D4}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -336,8 +361,72 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+								<State Name="Custom State" ID="{2D6433F3-6CA8-4B9B-8428-3F3F8B94E604}" ShortID="372508026">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-80"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</RandomSequenceContainer>
-				<Sound Name="Windup" ID="{FD6810A2-FFB4-4932-8453-4FE1DF398023}" ShortID="7560636" Type="SoundFX">
+				<Sound Name="Ghost Attack" ID="{E6AB9EB0-DB23-46EF-B9FB-3727D947A61E}" ShortID="645798703" Type="SoundFX">
+					<PropertyList>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Distance_Attenuation_Enemy" ID="{D2AFA710-D2F4-4728-A658-B0D00E9A834C}" WorkUnitID="{5EEE7555-1318-41FD-BA38-2D7C439DC5EC}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C39E72EE-F921-4885-B637-C3E5181945D4}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ghost Attack" ID="{6609D062-0C2F-43E5-9A47-8AD954C9A334}" ShortID="43697082">
+							<Language>SFX</Language>
+							<AudioFile>Ghost Attack.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Ghost Attack" ID="{6609D062-0C2F-43E5-9A47-8AD954C9A334}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Menu Button" ID="{58602F31-70C8-4E62-98A8-5C72D24C0AF8}" ShortID="187137154" Type="SoundFX">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
@@ -347,18 +436,30 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Windup" ID="{44CA0430-5BEB-479B-8DFA-10FD714B007C}" ShortID="680501347">
+						<AudioFileSource Name="Menu Button" ID="{AC9478EA-817D-459A-A3AE-54EF2375852A}" ShortID="261497381">
 							<Language>SFX</Language>
-							<AudioFile>Windup.wav</AudioFile>
+							<AudioFile>Menu Button.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+					</StateInfo>
 					<ActiveSourceList>
-						<ActiveSource Name="Windup" ID="{44CA0430-5BEB-479B-8DFA-10FD714B007C}" Platform="Linked"/>
+						<ActiveSource Name="Menu Button" ID="{AC9478EA-817D-459A-A3AE-54EF2375852A}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Music Box Melody_1" ID="{E47B5F32-77A6-455E-B606-03F3067EAB3B}" ShortID="309208358" Type="SoundFX">
+				<Sound Name="Music Box Melody" ID="{E4CC93DB-777C-40FE-A902-2A58DF636AB0}" ShortID="621990886" Type="SoundFX">
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -368,19 +469,1249 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+							<ObjectRef Name="Environmental" ID="{CA399749-ED30-4B11-96DB-E6F398E62BA7}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Music Box Melody_1" ID="{ABBC5BAA-AD57-4B82-8F63-0E02CADEC1FE}" ShortID="895564466">
+						<AudioFileSource Name="Music Box Melody" ID="{A6C6FD36-CB32-449E-AA11-0774BD57DC39}" ShortID="105985574">
 							<Language>SFX</Language>
-							<AudioFile>Music Box Melody_1.wav</AudioFile>
+							<AudioFile>Music Box Melody.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+								<State Name="Custom State" ID="{0227E921-FF32-4385-A760-BF1475F91A36}" ShortID="504950201">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-80"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ActiveSourceList>
-						<ActiveSource Name="Music Box Melody_1" ID="{ABBC5BAA-AD57-4B82-8F63-0E02CADEC1FE}" Platform="Linked"/>
+						<ActiveSource Name="Music Box Melody" ID="{A6C6FD36-CB32-449E-AA11-0774BD57DC39}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Snake Appear" ID="{09CA3FA5-264E-4FC5-864E-0CDFA9BC0FA2}" ShortID="738038981" Type="SoundFX">
+					<PropertyList>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{1F526A6D-4A29-425E-82AE-22436C5B3B91}">
+								<Attenuation Name="Distance_Attenuation_Snake (Custom)" ID="{F2CB88BA-EC59-4749-9100-1FD30E0CACD4}" ShortID="796277539">
+									<PropertyList>
+										<Property Name="RadiusMax" Type="Real64" Value="40"/>
+									</PropertyList>
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{1E60A2F7-8A99-4363-9285-5DE05AA2D3BA}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Log3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>40</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="LowPassFilter" ID="{637CDDCD-4A91-4B1A-AF79-EB98E86EEBA8}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="65537"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Exp3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>40</XPos>
+															<YPos>100</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C39E72EE-F921-4885-B637-C3E5181945D4}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Snake Appear" ID="{7E28C178-3266-423D-863C-DA0216D1B315}" ShortID="840012647">
+							<Language>SFX</Language>
+							<AudioFile>Snake Appear.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+								<State Name="Custom State" ID="{EDFFF891-BC87-4E5B-9D0F-70582E9FCE43}" ShortID="423415528">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-80"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Snake Appear" ID="{7E28C178-3266-423D-863C-DA0216D1B315}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Snake Disappear" ID="{B41077D9-1C45-45BC-9302-7E19744E0600}" ShortID="88598252" Type="SoundFX">
+					<PropertyList>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{1F526A6D-4A29-425E-82AE-22436C5B3B91}">
+								<Attenuation Name="Distance_Attenuation_Snake (Custom)" ID="{137028B9-3966-4220-8EA5-EA6E31A35B7C}" ShortID="97318501">
+									<PropertyList>
+										<Property Name="RadiusMax" Type="Real64" Value="40"/>
+									</PropertyList>
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{028CCBA4-B088-4FBF-97CD-1ECC6B77B2E5}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Log3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>40</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="LowPassFilter" ID="{428BB1EE-2A9C-48C3-9D9E-5E576D3A2DC0}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="65537"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Exp3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>40</XPos>
+															<YPos>100</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C39E72EE-F921-4885-B637-C3E5181945D4}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Snake Disappear" ID="{09F9A0C1-206A-4981-BC53-EEC4A1087EC3}" ShortID="555888398">
+							<Language>SFX</Language>
+							<AudioFile>Snake Disappear.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+								<State Name="Custom State" ID="{AE781F8A-EE64-4074-B319-8F2F4A49E38B}" ShortID="171957045">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-80"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Snake Disappear" ID="{09F9A0C1-206A-4981-BC53-EEC4A1087EC3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Windup" ID="{17FBCBAA-013A-418F-8667-79E4AA7834B1}" ShortID="178506545" Type="SoundFX">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C39E72EE-F921-4885-B637-C3E5181945D4}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Windup" ID="{1CA4C626-015B-4BCE-A621-73190AA6470A}" ShortID="297157849">
+							<Language>SFX</Language>
+							<AudioFile>Windup.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+								<State Name="Custom State" ID="{F9C697F8-4F84-44A1-A7B7-230345D196AC}" ShortID="17915727">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-80"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Windup" ID="{1CA4C626-015B-4BCE-A621-73190AA6470A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Snake Hiss" ID="{4FFCB96C-8E42-4C5D-9C26-0C6A29990824}" ShortID="225700477">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D62BB4A7-1E23-4E24-A938-550988525841}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="3"/>
+											<Property Name="Min" Type="Real64" Value="-2"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{1F526A6D-4A29-425E-82AE-22436C5B3B91}">
+								<Attenuation Name="Distance_Attenuation_Snake (Custom)" ID="{C091DF5F-EB1A-4614-BD5D-58D06D8088AB}" ShortID="987501122">
+									<PropertyList>
+										<Property Name="RadiusMax" Type="Real64" Value="40"/>
+									</PropertyList>
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{CF1CD59E-1C85-4ED5-BC47-DA54E48E7ADA}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Log3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>40</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="LowPassFilter" ID="{488CDD64-A4FE-4558-AC89-AB984B0D84ED}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="65537"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Exp3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>40</XPos>
+															<YPos>100</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C39E72EE-F921-4885-B637-C3E5181945D4}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Snake Hiss" ID="{86774897-420B-4403-9C8C-2C3E50BC2B67}" ShortID="792825894" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Hiss" ID="{48C99D55-90F4-4721-8CBB-33BAB3BB5ED2}" ShortID="762669817">
+									<Language>SFX</Language>
+									<AudioFile>Snake Hiss.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Hiss" ID="{48C99D55-90F4-4721-8CBB-33BAB3BB5ED2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Hiss_1" ID="{3E6FFBD9-68DA-46FA-A90E-B4A8F937BA0A}" ShortID="634644468" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Hiss_1" ID="{4F168A04-9F42-4DC0-9D54-05168412A43C}" ShortID="113435458">
+									<Language>SFX</Language>
+									<AudioFile>Snake Hiss_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Hiss_1" ID="{4F168A04-9F42-4DC0-9D54-05168412A43C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Hiss_2" ID="{057DB73C-3EDD-4B44-89D2-8DCE59887B71}" ShortID="29535918" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Hiss_2" ID="{03BA137C-9136-46DD-B92C-73AE6E1F118F}" ShortID="820383750">
+									<Language>SFX</Language>
+									<AudioFile>Snake Hiss_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Hiss_2" ID="{03BA137C-9136-46DD-B92C-73AE6E1F118F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Hiss_3" ID="{FED32433-1F53-4CB6-A50A-0F0C55C699A8}" ShortID="586797563" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Hiss_3" ID="{F8C2F046-6533-465C-9784-310840A98638}" ShortID="727005990">
+									<Language>SFX</Language>
+									<AudioFile>Snake Hiss_3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Hiss_3" ID="{F8C2F046-6533-465C-9784-310840A98638}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Hiss_4" ID="{198B6552-32ED-472E-A4CC-054595822F20}" ShortID="836281890" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Hiss_4" ID="{CEC17828-227D-4589-A989-8BBBBC33CD60}" ShortID="993488737">
+									<Language>SFX</Language>
+									<AudioFile>Snake Hiss_4.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Hiss_4" ID="{CEC17828-227D-4589-A989-8BBBBC33CD60}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Hiss_5" ID="{4096E97F-2507-4119-97FB-ACB5785374AF}" ShortID="1066596701" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Hiss_5" ID="{E15A4995-41CF-44AF-B296-9AC20627D8D0}" ShortID="943730900">
+									<Language>SFX</Language>
+									<AudioFile>Snake Hiss_5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Hiss_5" ID="{E15A4995-41CF-44AF-B296-9AC20627D8D0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Hiss_6" ID="{9BE5A57E-8ABB-4671-9960-9DF4DD8642D4}" ShortID="473695103" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Hiss_6" ID="{2BC0FA04-2BB3-4CBA-AEF5-EAB0DA07E7F7}" ShortID="634218394">
+									<Language>SFX</Language>
+									<AudioFile>Snake Hiss_6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Hiss_6" ID="{2BC0FA04-2BB3-4CBA-AEF5-EAB0DA07E7F7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Hiss_7" ID="{931FD356-7D11-48AA-BBF2-ECC71762AD94}" ShortID="959468987" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Hiss_7" ID="{6ADFB3AC-7B6A-4518-841D-B7A3DA318E63}" ShortID="317669979">
+									<Language>SFX</Language>
+									<AudioFile>Snake Hiss_7.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Hiss_7" ID="{6ADFB3AC-7B6A-4518-841D-B7A3DA318E63}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+								<State Name="Custom State" ID="{D07990F3-58FD-4111-9239-EDB11529DCC8}" ShortID="826712470">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-80"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Snake Move" ID="{336F1347-3A03-4DAE-B4BC-ACA92F848CF7}" ShortID="777370312">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{1F526A6D-4A29-425E-82AE-22436C5B3B91}">
+								<Attenuation Name="Distance_Attenuation_Snake (Custom)" ID="{13873EA0-24F5-4D73-BC31-0343E5267787}" ShortID="854304715">
+									<PropertyList>
+										<Property Name="RadiusMax" Type="Real64" Value="40"/>
+									</PropertyList>
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{63EFB3E3-9F3A-4FF5-819B-FDD3E42AA1B4}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Log3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>40</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="LowPassFilter" ID="{B0D706A7-78A4-44EC-88FA-EF4A47D5EAB5}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="65537"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Exp3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>40</XPos>
+															<YPos>100</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C39E72EE-F921-4885-B637-C3E5181945D4}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="env_forest" ID="{2153F5A2-5E1E-478B-9603-0F98BCD2E8B8}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Snake Move" ID="{AFC497BB-EEF2-4786-93E9-34BF8C774D4D}" ShortID="862551050" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Move" ID="{E5A56978-F361-41C1-A728-27D6C378405D}" ShortID="709901688">
+									<Language>SFX</Language>
+									<AudioFile>Snake Move.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Move" ID="{E5A56978-F361-41C1-A728-27D6C378405D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Move_1" ID="{61B64941-5DEB-4057-9E7B-3E527AE1A17B}" ShortID="190645823" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Move_1" ID="{EBE87356-ED53-4EDA-9D80-1C1CEA72BBAD}" ShortID="515091371">
+									<Language>SFX</Language>
+									<AudioFile>Snake Move_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Move_1" ID="{EBE87356-ED53-4EDA-9D80-1C1CEA72BBAD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Move_2" ID="{BF549CE2-CFFD-4B3E-91BD-8B9AA9F9E4B7}" ShortID="411340428" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Move_2" ID="{7FEA890F-E896-4F05-863C-8264DAE01056}" ShortID="445005326">
+									<Language>SFX</Language>
+									<AudioFile>Snake Move_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Move_2" ID="{7FEA890F-E896-4F05-863C-8264DAE01056}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Move_3" ID="{9A3D57E4-CC0F-413F-8D20-DAEF581D3910}" ShortID="312633748" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Move_3" ID="{024A4E74-B140-47B6-AD15-F82CAB8019E5}" ShortID="472583299">
+									<Language>SFX</Language>
+									<AudioFile>Snake Move_3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Move_3" ID="{024A4E74-B140-47B6-AD15-F82CAB8019E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Move_4" ID="{F1512C48-D15E-4C5C-8DD2-FA01F116875D}" ShortID="376863192" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Move_4" ID="{88C6776E-287C-4A11-8025-E4A3C27AC65B}" ShortID="737559129">
+									<Language>SFX</Language>
+									<AudioFile>Snake Move_4.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Move_4" ID="{88C6776E-287C-4A11-8025-E4A3C27AC65B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Move_5" ID="{9A187B5D-DF93-4E51-B484-8D5B00ECE9A4}" ShortID="324159226" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Move_5" ID="{4F9FB76B-1967-4FBB-93C5-C03A5B89B68F}" ShortID="399234406">
+									<Language>SFX</Language>
+									<AudioFile>Snake Move_5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Move_5" ID="{4F9FB76B-1967-4FBB-93C5-C03A5B89B68F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Snake Move_6" ID="{713596FD-5F3E-4FC0-9948-E852F6FEE3D6}" ShortID="677877858" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Snake Move_6" ID="{33F27E48-F7DC-4C65-9E6F-6A9F08462515}" ShortID="1047240800">
+									<Language>SFX</Language>
+									<AudioFile>Snake Move_6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Snake Move_6" ID="{33F27E48-F7DC-4C65-9E6F-6A9F08462515}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+								<State Name="Custom State" ID="{0B0F4175-069B-4ED6-933F-3094D65FD6B1}" ShortID="311430689">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-80"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Ambiance Howl" ID="{F2EB1FFB-4C41-4104-BA01-AB0702C709E8}" ShortID="291986252">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="4">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{4BD659F0-1272-42C0-A2A5-80BF96E5EF21}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="3"/>
+											<Property Name="Min" Type="Real64" Value="-2"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Ambiance" ID="{415BFC73-1931-4E91-9E84-D50A4AAD057F}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Howl" ID="{8A969C6B-9AA3-4B3E-9C90-9D2825BDEB68}" ShortID="690897338" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl" ID="{3769C0D2-6BC6-4AE4-8790-624A2268CCD4}" ShortID="361954503">
+									<Language>SFX</Language>
+									<AudioFile>Howl.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl" ID="{3769C0D2-6BC6-4AE4-8790-624A2268CCD4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Howl_1" ID="{48C83C21-B4CB-41DB-95AC-D0257D6A5F97}" ShortID="374654445" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl_1" ID="{6DB78638-3547-4936-A814-48E0C4138B36}" ShortID="891389895">
+									<Language>SFX</Language>
+									<AudioFile>Howl_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl_1" ID="{6DB78638-3547-4936-A814-48E0C4138B36}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Howl_2" ID="{D5F3F0DB-D502-40F3-96A6-0339DFD7D8D4}" ShortID="755790911" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl_2" ID="{8726A597-86F8-4031-B488-9ABF056001FF}" ShortID="473442430">
+									<Language>SFX</Language>
+									<AudioFile>Howl_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl_2" ID="{8726A597-86F8-4031-B488-9ABF056001FF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Howl_3" ID="{402FEED7-778F-4325-972A-387F4E8B0B3C}" ShortID="79080360" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl_3" ID="{707CDC85-DA25-4F65-8DBC-DA8C4A1BDDF0}" ShortID="479348030">
+									<Language>SFX</Language>
+									<AudioFile>Howl_3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl_3" ID="{707CDC85-DA25-4F65-8DBC-DA8C4A1BDDF0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Howl_4" ID="{43B77C1F-6E1A-48E0-920E-4075A9F6E817}" ShortID="132723252" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl_4" ID="{FDB24BE5-05CF-4CD9-B058-59AC9B758AF7}" ShortID="757042822">
+									<Language>SFX</Language>
+									<AudioFile>Howl_4.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl_4" ID="{FDB24BE5-05CF-4CD9-B058-59AC9B758AF7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Howl_5" ID="{F0F7429F-794B-4B9F-8A59-B63A7E4A9DB2}" ShortID="205947679" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl_5" ID="{CECF605C-2617-4236-8E16-D9455A32E33D}" ShortID="132415659">
+									<Language>SFX</Language>
+									<AudioFile>Howl_5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl_5" ID="{CECF605C-2617-4236-8E16-D9455A32E33D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Howl_6" ID="{7A098679-8BF4-4FD4-878B-A63ABA47BD07}" ShortID="844507682" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl_6" ID="{7E0D3414-FF9A-4A89-828D-19738DA625DF}" ShortID="1022005065">
+									<Language>SFX</Language>
+									<AudioFile>Howl_6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl_6" ID="{7E0D3414-FF9A-4A89-828D-19738DA625DF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Howl_7" ID="{DE3BEF18-402F-4A02-89BA-CCFEE67C9DFB}" ShortID="639114032" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl_7" ID="{1D43307F-519D-43BD-919E-F64AC163A2FE}" ShortID="197800">
+									<Language>SFX</Language>
+									<AudioFile>Howl_7.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl_7" ID="{1D43307F-519D-43BD-919E-F64AC163A2FE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Howl_8" ID="{C041183A-DFAE-478A-A8D0-425A2B44E861}" ShortID="217315349" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Howl_8" ID="{0C989AAF-BAC7-49B3-B0D2-85EDD203F225}" ShortID="87900637">
+									<Language>SFX</Language>
+									<AudioFile>Howl_8.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Howl_8" ID="{0C989AAF-BAC7-49B3-B0D2-85EDD203F225}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Ambiance Wind" ID="{418398A2-F2F5-434D-90C3-278B7C92E6F1}" ShortID="520249056">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Ambiance" ID="{415BFC73-1931-4E91-9E84-D50A4AAD057F}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Wind" ID="{C3F9D4C3-D2D6-447B-B866-7D6786DCAB92}" ShortID="990014219" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind" ID="{B6D68BB2-3AE7-48E6-A936-0767D2875B50}" ShortID="64539119">
+									<Language>SFX</Language>
+									<AudioFile>Wind.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind" ID="{B6D68BB2-3AE7-48E6-A936-0767D2875B50}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wind_1" ID="{188463DE-7687-4E0F-AAC6-3A57E5410A21}" ShortID="207511672" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind_1" ID="{3B0CBE5A-072D-4EB1-9769-1FE082C9B4F2}" ShortID="168978832">
+									<Language>SFX</Language>
+									<AudioFile>Wind_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind_1" ID="{3B0CBE5A-072D-4EB1-9769-1FE082C9B4F2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wind_2" ID="{F68AE395-A25F-4830-8ABE-0C76A870A15B}" ShortID="141358021" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind_2" ID="{B3BD6B82-7FEE-462E-89F5-13383A744A9B}" ShortID="640131029">
+									<Language>SFX</Language>
+									<AudioFile>Wind_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind_2" ID="{B3BD6B82-7FEE-462E-89F5-13383A744A9B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wind_3" ID="{01CC623A-5D2E-44DA-BF31-688DB075A842}" ShortID="574011575" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind_3" ID="{8F184035-ED80-4132-857E-D82FAFC7B62E}" ShortID="300360605">
+									<Language>SFX</Language>
+									<AudioFile>Wind_3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind_3" ID="{8F184035-ED80-4132-857E-D82FAFC7B62E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wind_4" ID="{99F7A3E9-355F-4B24-AF6B-59E0AA8107BE}" ShortID="433168227" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind_4" ID="{A8DD429F-BCF5-4A35-BE8F-0C71180B65FB}" ShortID="789060983">
+									<Language>SFX</Language>
+									<AudioFile>Wind_4.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind_4" ID="{A8DD429F-BCF5-4A35-BE8F-0C71180B65FB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wind_5" ID="{9DFC2F94-EA9C-4F46-A9E8-0A956DEB294B}" ShortID="493904585" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind_5" ID="{35D168CA-CCC7-40D4-BCF7-044404A4E004}" ShortID="154178139">
+									<Language>SFX</Language>
+									<AudioFile>Wind_5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind_5" ID="{35D168CA-CCC7-40D4-BCF7-044404A4E004}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wind_6" ID="{E31CD4B7-3B60-4AEE-A7B4-E4E4A91676EE}" ShortID="536910543" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind_6" ID="{068099C0-140D-4C7D-B408-1D165BCE01C4}" ShortID="993143238">
+									<Language>SFX</Language>
+									<AudioFile>Wind_6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind_6" ID="{068099C0-140D-4C7D-B408-1D165BCE01C4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wind_7" ID="{21E4DD37-11B2-41CB-AEF6-922D5CC3B73D}" ShortID="525690788" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind_7" ID="{65256EEE-C7E6-4B12-81D8-77452D6F943A}" ShortID="792122977">
+									<Language>SFX</Language>
+									<AudioFile>Wind_7.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind_7" ID="{65256EEE-C7E6-4B12-81D8-77452D6F943A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wind_8" ID="{FEB5FC98-95E1-4D3C-B38E-AB8BEC714431}" ShortID="94096659" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C062CA20-E8FA-4D81-939F-B6FFDC40329F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FCC7FA10-F7A8-4FB3-A15C-0897249FF4E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wind_8" ID="{95495D07-C009-423C-85D2-D8A3B92378F2}" ShortID="822767449">
+									<Language>SFX</Language>
+									<AudioFile>Wind_8.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wind_8" ID="{95495D07-C009-423C-85D2-D8A3B92378F2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

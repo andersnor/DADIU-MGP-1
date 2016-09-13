@@ -30,6 +30,26 @@ public class GameHandler{
     public delegate void GhostAttack();
     public event GhostAttack OnGhostAttack;
 
+
+
+    public delegate void SoundMusicBoxRewind();
+    public event SoundMusicBoxRewind SoundOnMusicBoxRewind;
+
+    public delegate void SoundMusicBoxPlay();
+    public event SoundMusicBoxPlay SoundOnMusicBoxPlay;
+
+    public delegate void SoundMusicBoxStop();
+    public event SoundMusicBoxPlay SoundOnMusicBoxStop;
+
+    public delegate void SoundMusicBoxPause();
+    public event SoundMusicBoxPlay SoundOnMusicBoxPause;
+
+    public delegate void SoundMusicBoxResume();
+    public event SoundMusicBoxPlay SoundOnMusicBoxResume;
+
+    public delegate void SoundMusicBoxRewindStop();
+    public event SoundMusicBoxPlay SoundOnMusicBoxRewindStop;
+
     public static GameHandler instance{
         get
         {
@@ -60,6 +80,43 @@ public class GameHandler{
     {
         if (OnMusicBoxRewinded != null)
             OnMusicBoxRewinded();
+    }
+
+    public void TriggerSoundMusicBoxStop()
+    {
+        if (SoundOnMusicBoxStop != null)
+            SoundOnMusicBoxStop();
+    }
+
+    public void TriggerSoundMusicBoxPlay()
+    {
+        if (SoundOnMusicBoxPlay != null)
+            SoundOnMusicBoxPlay();
+    }
+
+    public void TriggerSoundMusicBoxRewind()
+    {
+        if (SoundOnMusicBoxRewind != null)
+            SoundOnMusicBoxRewind();
+    }
+
+    public void TriggerSoundMusicBoxResume()
+    {
+        if (SoundOnMusicBoxStop != null)
+            SoundOnMusicBoxResume();
+    }
+
+    public void TriggerSoundMusicBoxPause()
+    {
+        if (SoundOnMusicBoxStop != null)
+            SoundOnMusicBoxPause();
+        Debug.Log("plz2");
+    }
+
+    public void TriggerSoundMusicBoxRewindStop()
+    {
+        if (SoundOnMusicBoxPlay != null)
+            SoundOnMusicBoxRewindStop();
     }
 
     public void TriggerMusicBoxTimeout()

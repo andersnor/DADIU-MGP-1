@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class callScenes : MonoBehaviour {
 
+    public GameObject instructionsScreen;
+
     public void loadScene(string sceneName)
     {
         Debug.Log("Loading scene " + sceneName);
@@ -12,5 +14,10 @@ public class callScenes : MonoBehaviour {
 
         if (sceneName == "StartScene")
             GameHandler.Clear();
+    }
+
+    public void TriggerInstructions(bool trigger)
+    {
+        instructionsScreen.SetActive(trigger);
     }
 }

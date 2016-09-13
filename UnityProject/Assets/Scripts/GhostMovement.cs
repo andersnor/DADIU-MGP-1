@@ -95,8 +95,9 @@ public class GhostMovement : MonoBehaviour {
             newPrint.GetComponent<Renderer>().material.mainTextureScale = new Vector2(-1f,1);
         }
         newPrint.transform.rotation = transform.rotation;
-        newPrint.GetComponent<AudioSource>().Play();
-        //newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO WWIVE SHIT
+        //newPrint.GetComponent<AudioSource>().Play();
+        newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO WWIVE SHIT
+        newPrint.GetComponent<ParticleSystem>().Play();
         newPrint.transform.SetParent(null);
         newPrint.transform.position = new Vector3(newPrint.transform.position.x, 0.005f, newPrint.transform.position.z);
         foot =! foot;

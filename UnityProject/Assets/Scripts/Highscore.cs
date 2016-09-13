@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Highscore {
-
+    [SerializeField]
     private int score = 0;
 
     public int GetScore()

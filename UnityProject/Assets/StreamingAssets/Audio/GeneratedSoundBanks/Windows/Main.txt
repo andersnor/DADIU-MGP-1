@@ -1,0 +1,79 @@
+Event	ID	Name			Wwise Object Path	Notes
+	196357682	Footsteps_Player			\Default Work Unit\Footsteps_Player	
+	550365015	Footsteps_Enemy			\Default Work Unit\Footsteps_Enemy	
+	780708924	Snake_Move_Stop			\Default Work Unit\Snake_Move_Stop	
+	979070061	Ghost_Attack			\Default Work Unit\Ghost_Attack	
+	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
+	2192397196	MenuButton			\Default Work Unit\MenuButton	
+	2193616777	Snake_Move			\Default Work Unit\Snake_Move	
+	2323541125	Snake_Disappear			\Default Work Unit\Snake_Disappear	
+	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
+	2981377429	Ambiance			\Default Work Unit\Ambiance	
+	3550974753	MusicBox_Windup			\Default Work Unit\MusicBox_Windup	
+	3929716593	Snake_Appear			\Default Work Unit\Snake_Appear	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2607556080	Menu			\Default Work Unit\Menu	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Menu			
+	1631528850	In_Menu	Menu			
+	2967546505	In_Game	Menu			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	17915727	In_Menu	Menu	\Actor-Mixer Hierarchy\Default Work Unit\Windup		
+	171957045	In_Menu	Menu	\Actor-Mixer Hierarchy\Default Work Unit\Snake Disappear		
+	311430689	In_Menu	Menu	\Actor-Mixer Hierarchy\Default Work Unit\Snake Move		
+	372508026	In_Menu	Menu	\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Enemy		
+	423415528	In_Menu	Menu	\Actor-Mixer Hierarchy\Default Work Unit\Snake Appear		
+	430499046	In_Menu	Menu	\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player		
+	504950201	In_Menu	Menu	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody		
+	826712470	In_Menu	Menu	\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss		
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	197800	Howl_7	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_7_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl_7		2071088
+	43697082	Ghost Attack	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Ghost Attack_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghost Attack		666036
+	64539119	Wind	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind		1186704
+	87900637	Howl_8	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_8_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl_8		1724052
+	87929646	Footsteps_4	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Footsteps_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_4		46656
+	105985574	Music Box Melody	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Music Box Melody_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody		8688722
+	113435458	Snake Hiss_1	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Hiss_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss\Snake Hiss_1		88640
+	132415659	Howl_5	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl_5		1020648
+	154178139	Wind_5	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind_5		1332236
+	168978832	Wind_1	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind_1		761308
+	245415407	Footsteps_2	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Footsteps_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_2		37952
+	261497381	Menu Button	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Menu Button_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		768064
+	297157849	Windup	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Windup_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Windup		336634
+	300360605	Wind_3	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind_3		1253876
+	317669979	Snake Hiss_7	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Hiss_7_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss\Snake Hiss_7		186384
+	361954503	Howl	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl		436660
+	399234406	Snake Move_5	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Move_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Move\Snake Move_5		806438
+	445005326	Snake Move_2	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Move_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Move\Snake Move_2		610952
+	469106502	Footsteps_1	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Footsteps_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_1		46656
+	472583299	Snake Move_3	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Move_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Move\Snake Move_3		553936
+	473442430	Howl_2	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl_2		806084
+	479348030	Howl_3	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl_3		1130732
+	515091371	Snake Move_1	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Move_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Move\Snake Move_1		448050
+	555888398	Snake Disappear	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Disappear_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Disappear		559026
+	634218394	Snake Hiss_6	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Hiss_6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss\Snake Hiss_6		192494
+	640131029	Wind_2	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind_2		1029976
+	682406377	Footsteps_6	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Footsteps_6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_6		48704
+	709901688	Snake Move	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Move_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Move\Snake Move		619098
+	727005990	Snake Hiss_3	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Hiss_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss\Snake Hiss_3		192494
+	731114191	Footsteps_3	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Footsteps_3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_3		47680
+	737559129	Snake Move_4	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Move_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Move\Snake Move_4		733130
+	757042822	Howl_4	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl_4		727724
+	762669817	Snake Hiss	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Hiss_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss\Snake Hiss		195546
+	789060983	Wind_4	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind_4		1298652
+	792122977	Wind_7	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_7_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind_7		1074760
+	818279564	Footsteps_5	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Footsteps_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps Player\Footsteps_5		50240
+	820383750	Snake Hiss_2	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Hiss_2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss\Snake Hiss_2		189438
+	822767449	Wind_8	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_8_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind_8		1063560
+	840012647	Snake Appear	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Appear_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Appear		825786
+	891389895	Howl_1	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl_1		873252
+	943730900	Snake Hiss_5	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Hiss_5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss\Snake Hiss_5		186384
+	993143238	Wind_6	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Wind_6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Wind\Wind_6		1119536
+	993488737	Snake Hiss_4	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Hiss_4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Hiss\Snake Hiss_4		81516
+	1022005065	Howl_6	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Howl_6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiance Howl\Howl_6		596676
+	1047240800	Snake Move_6	C:\Users\dadiu\Documents\WwiseProjects\Team 2 - MGP-1\.cache\Windows\SFX\Snake Move_6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Snake Move\Snake Move_6		651678
+

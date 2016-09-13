@@ -30,10 +30,10 @@ public class PlayerPrint : MonoBehaviour {
         }
         newPrint.transform.SetParent(transform.GetChild(0));//
         if (foot)
-            newPrint.transform.localPosition = new Vector3(-printOffset, 0, 0);
+            newPrint.transform.localPosition = new Vector3(-printOffset, 0.01f, 0);
         else
         {
-            newPrint.transform.localPosition = new Vector3(printOffset, 0, 0);
+            newPrint.transform.localPosition = new Vector3(printOffset, 0.01f, 0);
             newPrint.GetComponent<Renderer>().material.mainTextureScale = new Vector2(-1f, 1);
         }
         Vector3 tempRot = Vector3.zero;
@@ -41,11 +41,13 @@ public class PlayerPrint : MonoBehaviour {
         tempRot.z = 0;
         tempRot.y = transform.GetChild(0).rotation.eulerAngles.y;
         newPrint.transform.rotation = Quaternion.Euler(tempRot);
-        newPrint.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
         //print(transform.GetChild(0).rotation.eulerAngles.y);
-        newPrint.GetComponent<AudioSource>().Play();
-        //newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO WWIVE SHIT
+        //newPrint.GetComponent<AudioSource>().Play();
+        newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO WWIVE SHIT
+        newPrint.GetComponent<ParticleSystem>().Play();
         newPrint.transform.SetParent(null);
+        newPrint.transform.localScale = new Vector3(0.025f, 0.01f, 0.025f);
         newPrint.transform.position = new Vector3(newPrint.transform.position.x, 0.005f, newPrint.transform.position.z);
         foot = !foot;
     }

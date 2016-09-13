@@ -3,42 +3,39 @@
 	<Platform GUID="{812BDCAF-2318-42E1-A63A-E0C863CCB6A4}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="1710991193" Timestamp="131179136771640523"/>
-				<File Name="Main" Hash="2943799891" Timestamp="131179136771600520"/>
-				<File Name="Main_01" Hash="2537555286" Timestamp="131179165399379216"/>
+				<File Name="Init" Hash="3017161968" Timestamp="131182485776883902"/>
+				<File Name="Main" Hash="3445459734" Timestamp="131182698888123167"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1658116868" Timestamp="131179165399429218"/>
+				<File Name="" Hash="706269194" Timestamp="131182719101645096"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{5BC909B2-D139-4373-8018-642FAC3117C6}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="2246982079" Timestamp="131179136770320447"/>
-				<File Name="Main" Hash="2943799891" Timestamp="131179136770290445"/>
-				<File Name="Main_01" Hash="2537555286" Timestamp="131179165379898101"/>
+				<File Name="Init" Hash="3620580730" Timestamp="131182485774923790"/>
+				<File Name="Main" Hash="3445459734" Timestamp="131182698887523133"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3037264570" Timestamp="131179165379948104"/>
+				<File Name="" Hash="1418542888" Timestamp="131182719101395082"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{076661B3-C176-4488-A5F1-4647807B0FFB}">
 		<Banks>
 			<Language ID="0">
-				<File Name="Init" Hash="718230625" Timestamp="131179136768920367"/>
-				<File Name="Main" Hash="3132518994" Timestamp="131179136768880365"/>
-				<File Name="Main_01" Hash="2177907751" Timestamp="131179161946671732"/>
+				<File Name="Init" Hash="2910535720" Timestamp="131182485772763666"/>
+				<File Name="Main" Hash="2030841738" Timestamp="131182698886863095"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="4203875064" Timestamp="131179164902940821"/>
+				<File Name="" Hash="2221742134" Timestamp="131182719099424969"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

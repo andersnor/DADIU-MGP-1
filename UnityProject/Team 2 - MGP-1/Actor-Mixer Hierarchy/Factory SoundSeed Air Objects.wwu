@@ -9945,8 +9945,28 @@ Air currents change during the hours of the day and foliage changes during  the 
 Air currents change during the hours of the day and months of the year.</Comment>
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-500</Value>
+											</ValueList>
+										</Property>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Spatialization" Type="bool" Value="False"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{405F9EDA-58FD-4F1A-B7CA-6A746041B83F}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -10100,10 +10120,10 @@ Air currents change during the hours of the day and months of the year.</Comment
 														</RTPC>
 													</RTPCList>
 												</Property>
-												<Property Name="Gustiness" Type="Real32" Value="0.43"/>
+												<Property Name="Gustiness" Type="Real32" Value="0.1"/>
 												<Property Name="GustinessAutomate" Type="bool" Value="True"/>
 												<Property Name="MaxDistance" Type="Real32" Value="20"/>
-												<Property Name="Variability" Type="Real32" Value="0.29"/>
+												<Property Name="Variability" Type="Real32" Value="0.9"/>
 												<Property Name="VariabilityAutomate" Type="bool" Value="True"/>
 												<Property Name="VelocityDynamicRange" Type="Real32" Value="1"/>
 											</PropertyList>
@@ -10305,8 +10325,18 @@ Air currents change during the hours of the day and months of the year.</Comment
 									<Comment>The more afraid you are, the more the willows weep and wail.</Comment>
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Spatialization" Type="bool" Value="False"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -10317,7 +10347,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 										<SourcePlugin Name="SoundSeed Air Wind" ID="{C74CD73D-0ED3-4CC9-9C8F-9EC841873ACF}" ShortID="855318940" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AttenuationRollOff" Type="Real32" Value="2"/>
-												<Property Name="AverageVelocity" Type="Real32" Value="50.5"/>
+												<Property Name="AverageVelocity" Type="Real32" Value="-500"/>
 												<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
 												<Property Name="AverageVelocityRandom" Type="Real32" Value="200"/>
 												<Property Name="ChannelMask" Type="int16" Value="2"/>
@@ -10654,6 +10684,24 @@ Air currents change during the hours of the day and months of the year.</Comment
 											</PluginInnerObjectList>
 										</SourcePlugin>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Menu" ID="{F3020393-5FBF-4DA0-B8D5-219FD9F9FA98}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="In_Menu" ID="{772939A0-0BD3-46DE-99D8-E8685E614BC2}"/>
+												<State Name="Custom State" ID="{5E3F16CE-EFFF-401A-B024-28FCE9C0C820}" ShortID="816912985">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16" Value="20"/>
+														<Property Name="Volume" Type="Real64" Value="-3"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ActiveSourceList>
 										<ActiveSource Name="SoundSeed Air Wind" ID="{C74CD73D-0ED3-4CC9-9C8F-9EC841873ACF}" Platform="Linked"/>
 									</ActiveSourceList>

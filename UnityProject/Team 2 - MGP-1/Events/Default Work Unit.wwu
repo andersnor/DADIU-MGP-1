@@ -28,9 +28,12 @@
 				<Event Name="MusicBox_Play" ID="{2A2C1EE1-5B9F-4BE8-B822-E092EE8F6776}">
 					<ChildrenList>
 						<Action Name="Play" ID="{04B1704F-61A9-4FAE-A2F4-08B61663EC08}" ShortID="712355101" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{EA9AFFE6-4AD6-4622-9330-41F995A73F58}" Global="false">
-									<ObjectRef Name="Music Box Melody_1" ID="{E47B5F32-77A6-455E-B606-03F3067EAB3B}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+									<ObjectRef Name="Music Box Melody" ID="{E4CC93DB-777C-40FE-A902-2A58DF636AB0}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -39,9 +42,12 @@
 				<Event Name="MusicBox_Stop" ID="{E0DD3D61-FE66-42CD-A293-225FE9CCFEEC}">
 					<ChildrenList>
 						<Action Name="Stop" ID="{DF8FB6DE-FD89-40F6-8777-EC55AF55E0AC}" ShortID="284433079" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{C78E8F0F-E7EF-444B-A917-B07E6C92B63D}" Global="false">
-									<ObjectRef Name="Music Box Melody_1" ID="{E47B5F32-77A6-455E-B606-03F3067EAB3B}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+									<ObjectRef Name="Music Box Melody" ID="{E4CC93DB-777C-40FE-A902-2A58DF636AB0}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -52,7 +58,204 @@
 						<Action Name="Play" ID="{BFF64040-F6EC-4F35-B54B-C33504C6C856}" ShortID="574803557" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{B60C9A32-39AE-4B45-B01B-7B2A6AFFBF6D}" Global="false">
-									<ObjectRef Name="Windup" ID="{FD6810A2-FFB4-4932-8453-4FE1DF398023}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+									<ObjectRef Name="Windup" ID="{17FBCBAA-013A-418F-8667-79E4AA7834B1}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MenuButton" ID="{10047319-7786-444D-9B72-64C3DB26F218}">
+					<ChildrenList>
+						<Action Name="Play" ID="{D3DCCF85-E266-4807-9B0E-D30E26EE44F6}" ShortID="456748067" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B383EFAD-532B-4DA4-B58D-1B6D1712839A}" Global="false">
+									<ObjectRef Name="Menu Button" ID="{58602F31-70C8-4E62-98A8-5C72D24C0AF8}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ghost_Attack" ID="{A7D0F99D-3C92-4B55-99DC-3E2B07CA2915}">
+					<ChildrenList>
+						<Action Name="Play" ID="{96B47F81-F582-49EC-888B-132B40822E24}" ShortID="947624695" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{601878E5-08C8-41C4-9BA1-C83F6DDD99CC}" Global="false">
+									<ObjectRef Name="Ghost Attack" ID="{E6AB9EB0-DB23-46EF-B9FB-3727D947A61E}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Snake_Appear" ID="{6447EB4A-27E2-4133-A2C0-A7CEEF99C1A7}">
+					<ChildrenList>
+						<Action Name="Play" ID="{ED269E26-4A90-46FD-8ABD-EC185C95C44B}" ShortID="612463578" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{83A01EB0-D5BA-47C4-9B3C-2C0C0E9E6E40}" Global="false">
+									<ObjectRef Name="Snake Appear" ID="{09CA3FA5-264E-4FC5-864E-0CDFA9BC0FA2}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Snake_Disappear" ID="{F0519371-CE54-4053-B7F0-13AEBB51D0B8}">
+					<ChildrenList>
+						<Action Name="Play" ID="{DDFDDF27-B2A0-46D2-BFEA-34BA1DE8F856}" ShortID="474149442" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B4F9BE19-C1C6-402B-A181-097E83449302}" Global="false">
+									<ObjectRef Name="Snake Disappear" ID="{B41077D9-1C45-45BC-9302-7E19744E0600}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Snake_Move" ID="{1160FA50-6148-455A-8B12-D16BE37ABAD0}">
+					<ChildrenList>
+						<Action Name="Reset Voice Volume" ID="{15102EDB-58DE-4B23-A43C-FBEE1048CD56}" ShortID="757707033" Type="ResetVolume" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{27BBD912-28E9-400F-A58E-54698EDC5511}" Global="false">
+									<ObjectRef Name="Snake Move" ID="{336F1347-3A03-4DAE-B4BC-ACA92F848CF7}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Reset Voice Volume" ID="{9F58AED2-788B-4357-9F69-5E27D5CF7C10}" ShortID="279189842" Type="ResetVolume" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B2CF151A-A3A4-4471-B53C-13F4036FB126}" Global="false">
+									<ObjectRef Name="Snake Hiss" ID="{4FFCB96C-8E42-4C5D-9C26-0C6A29990824}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{B6BC51A4-7CBF-4CCD-8C16-7A3D1DFB7F6A}" ShortID="49648528" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{44FD7449-5FE7-4B13-8C8D-EB2436413C73}" Global="false">
+									<ObjectRef Name="Snake Move" ID="{336F1347-3A03-4DAE-B4BC-ACA92F848CF7}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{38BDC387-2233-4B53-8554-64427CFC0A22}" ShortID="221513854" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="3">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{202EC36E-789D-482F-8B3A-1B8FF36FD280}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-1.5"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{EFFB3663-8CA5-4F54-BDF2-F0EFDCE05118}" Global="false">
+									<ObjectRef Name="Snake Hiss" ID="{4FFCB96C-8E42-4C5D-9C26-0C6A29990824}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Snake_Move_Stop" ID="{BE54A8D6-AF97-489F-BA3C-DF4A5D4F4241}">
+					<ChildrenList>
+						<Action Name="Set Voice Volume" ID="{14FF619E-A0A3-4E76-9BF9-06B88F2F6B67}" ShortID="1011905962" Type="ChangeVolume" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-80"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{3EDB91A5-4AD1-4990-87C9-29A6389C2783}" Global="false">
+									<ObjectRef Name="Snake Move" ID="{336F1347-3A03-4DAE-B4BC-ACA92F848CF7}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Set Voice Volume" ID="{33BE2050-9CD3-440C-AA0E-A6A650E82BBC}" ShortID="570481597" Type="ChangeVolume" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-80"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{C854A0CB-0F68-4CBB-BA00-BDFDCE843E3E}" Global="false">
+									<ObjectRef Name="Snake Hiss" ID="{4FFCB96C-8E42-4C5D-9C26-0C6A29990824}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Stop" ID="{D39C5309-B14F-4C75-AF80-AFE1A9A6897F}" ShortID="913778061" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{75A4789D-64AE-41FE-9AB3-702515433725}" Global="false">
+									<ObjectRef Name="Snake Move" ID="{336F1347-3A03-4DAE-B4BC-ACA92F848CF7}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Stop" ID="{8E87CA02-1FDF-4DF0-B23E-41731C2EBF90}" ShortID="752538429" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{C013D39F-957D-42E0-8CCE-BEF90CB200AC}" Global="false">
+									<ObjectRef Name="Snake Hiss" ID="{4FFCB96C-8E42-4C5D-9C26-0C6A29990824}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ambiance" ID="{90AF0F8C-2EE2-41CF-9A59-F166CBB8E591}">
+					<ChildrenList>
+						<Action Name="Play" ID="{7A400FE7-DDB5-409F-A6C6-340754CDD4DE}" ShortID="900036542" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{33A59A47-E499-43A8-B2B5-1BD5CD2CE582}" Global="false">
+									<ObjectRef Name="Ambiance Wind" ID="{418398A2-F2F5-434D-90C3-278B7C92E6F1}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{01B43C78-12E8-49D7-8B77-A555EF82C4DF}" ShortID="615530380" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{86AF52B8-11C6-4563-B9BD-479171E71FDE}" Global="false">
+									<ObjectRef Name="Ambiance Howl" ID="{F2EB1FFB-4C41-4104-BA01-AB0702C709E8}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Pause" ID="{F50752F6-2446-4248-B51A-EC5B392280A7}">
+					<ChildrenList>
+						<Action Name="Pause" ID="{C8ACC508-1908-4747-BECA-37E05BE57EE7}" ShortID="953412814" Type="Pause" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{3D7A000F-F9DC-4573-99A5-1CE7AD40BD6A}" Global="false">
+									<ObjectRef Name="Music Box Melody" ID="{E4CC93DB-777C-40FE-A902-2A58DF636AB0}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Resume" ID="{4073EE19-D4CB-47E6-A11A-78A788F702EF}">
+					<ChildrenList>
+						<Action Name="Resume" ID="{3522C0CB-8B97-4021-A172-70C97599D17D}" ShortID="440479347" Type="Resume" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{C74D3EEA-C9A8-4940-969C-2BBE74826C62}" Global="false">
+									<ObjectRef Name="Music Box Melody" ID="{E4CC93DB-777C-40FE-A902-2A58DF636AB0}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Windup_Stop" ID="{41F457AA-3967-457A-AA3A-0CEEBA7DD562}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{C4ED1D61-1E4C-4883-A6DD-4DC0C7DDD3A9}" ShortID="957559479" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{9FC8C47E-7077-4484-8D51-618F7ABFC47E}" Global="false">
+									<ObjectRef Name="Windup" ID="{17FBCBAA-013A-418F-8667-79E4AA7834B1}" WorkUnitID="{AAB8CF38-6932-4F43-8A16-5F939562AC3C}"/>
 								</Element>
 							</ElementList>
 						</Action>
