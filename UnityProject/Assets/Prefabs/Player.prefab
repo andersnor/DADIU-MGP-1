@@ -24,6 +24,7 @@ GameObject:
   - 124: {fileID: 124000010362865236}
   - 81: {fileID: 81000010067326876}
   - 114: {fileID: 114000013729067146}
+  - 114: {fileID: 114000012306393980}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -254,7 +255,7 @@ MonoBehaviour:
   player: {fileID: 1000012888506654}
   playerCamera: {fileID: 1000012447537746}
   movementSpeed: 150
-  drag: 0.9
+  currentOrientation: {x: 0, y: 0, z: 0}
   stepThold: 0.5
 --- !u!114 &114000011531846598
 MonoBehaviour:
@@ -268,6 +269,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+--- !u!114 &114000012306393980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012447537746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4d961e8415ea64e8354b8a7fe70b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialZoom_FOV: 60
+  endZoom_FOV: 60
+  startDistToBox: 2
+  timeToMove: 6
+  accelerationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0.275
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  useCurveForZoom: 1
 --- !u!114 &114000013119481348
 MonoBehaviour:
   m_ObjectHideFlags: 1

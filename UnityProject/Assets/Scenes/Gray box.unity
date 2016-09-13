@@ -896,85 +896,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 1000012206242706, guid: 060a69bbff7f0344396fb7621ca3fcb2, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
         type: 2}
       propertyPath: followTar
       value: 
       objectReference: {fileID: 1508589508}
-    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
-        type: 2}
-      propertyPath: printOffSet
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
-        type: 2}
-      propertyPath: feetDistance
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
-        type: 2}
-      propertyPath: stepThold
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
-        type: 2}
-      propertyPath: idleTimer
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
-        type: 2}
-      propertyPath: sprintSpeed
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013910945258, guid: 060a69bbff7f0344396fb7621ca3fcb2,
-        type: 2}
-      propertyPath: walkSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012206242706, guid: 060a69bbff7f0344396fb7621ca3fcb2, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012206242706, guid: 060a69bbff7f0344396fb7621ca3fcb2, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 060a69bbff7f0344396fb7621ca3fcb2, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1048358268 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012206242706, guid: 060a69bbff7f0344396fb7621ca3fcb2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1048358267}
---- !u!114 &1048358269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1048358268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c717652af01074c89f3014c292d023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!135 &1048358270
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1048358268}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1175530556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1097,10 @@ Prefab:
     - target: {fileID: 4000010889788210, guid: 5b3266f4f6cdcb9448665a223f75a6b4, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013455402680, guid: 5b3266f4f6cdcb9448665a223f75a6b4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b3266f4f6cdcb9448665a223f75a6b4, type: 2}
@@ -1377,7 +1310,7 @@ MonoBehaviour:
   player: {fileID: 1647082655}
   playerCamera: {fileID: 474236396}
   movementSpeed: 150
-  drag: 10
+  currentOrientation: {x: 0, y: 0, z: 0}
   stepThold: 0.5
 --- !u!23 &1647082663
 MeshRenderer:
