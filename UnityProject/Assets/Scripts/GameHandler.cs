@@ -10,7 +10,7 @@ public class GameHandler{
     public GameObject snake;
     public GameObject musicBox;
 
-    public Highscore highscore;
+    public Highscore highscore = new Highscore();
 
     public delegate void MusicBoxRewind();
     public event MusicBoxRewind OnMusicBoxRewind;
