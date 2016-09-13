@@ -45,10 +45,9 @@ public class GameHandler{
         SceneManager.LoadScene(sceneNr);
     }
 
-    public void reset()
+    public static void Clear()
     {
         current = null;
-        SceneManager.LoadScene(0);
     }
 
     public void TriggerMusicBoxRewind()
