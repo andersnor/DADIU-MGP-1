@@ -30,14 +30,17 @@ public class PlayerPrint : MonoBehaviour {
         }
         newPrint.transform.SetParent(transform);
         if (foot)
-            newPrint.transform.localPosition = new Vector3(-printOffset, surfDist, 0);
+            newPrint.transform.localPosition = new Vector3(-printOffset, 0, 0);
         else
-            newPrint.transform.localPosition = new Vector3(printOffset, surfDist, 0);
+        {
+            newPrint.transform.localPosition = new Vector3(printOffset, 0, 0);
+            newPrint.GetComponent<Renderer>().material.mainTextureScale = new Vector2(-1f, 1);
+        }
         newPrint.transform.rotation = transform.rotation;
         newPrint.GetComponent<AudioSource>().Play();
-        //newPrint.GetComponent<AkAmbient>().triggered(); // PLAY AUDIO WWIVE SHIT
+        //newPrint.GetComponent<AkAmbient>().triggered(); //PLAY AUDIO WWIVE SHIT
         newPrint.transform.SetParent(null);
-        newPrint.transform.position = new Vector3(newPrint.transform.position.x, 0.005f, transform.position.z);
+        newPrint.transform.position = new Vector3(newPrint.transform.position.x, 0.005f, newPrint.transform.position.z);
         foot = !foot;
     }
 
