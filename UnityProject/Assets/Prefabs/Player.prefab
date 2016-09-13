@@ -49,7 +49,6 @@ GameObject:
   - 108: {fileID: 108000013646353412}
   - 114: {fileID: 114000013173728894}
   - 114: {fileID: 114000011531846598}
-  - 114: {fileID: 114000013119481348}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -305,42 +304,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013119481348
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012888506654}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f760450efb76084c9f0ed968d92c614, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  didDestroy: 0
-  valueGuid:
-  - 35
-  - 87
-  - 153
-  - 24
-  - 67
-  - 143
-  - 106
-  - 74
-  - 144
-  - 35
-  - 138
-  - 39
-  - 28
-  - 184
-  - 214
-  - 255
-  bankName: 4d61696e5f3031
-  loadAsynchronous: 0
-  decodeBank: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
 --- !u!114 &114000013173728894
 MonoBehaviour:
   m_ObjectHideFlags: 1
